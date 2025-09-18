@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacote Escolhido</title>
+  <style>
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f5f4;
+      color:#2b2b2b;
+    }
+
+
+    header {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 40px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 24px;
+        color: black;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+    nav a:hover {
+        color: #6da9d6;
+    }
+
+
+
+    h1.pagina-titulo{
+      text-align:center;
+      font-size: 20px;
+      letter-spacing:.08em;
+      color:#111827;
+      margin: 20px 0;
+      font-weight:700;
+    }
+
+    .card{
+      background:#fff;
+      border-radius: 0;
+      box-shadow: 0 10px 24px rgba(0,0,0,.10);
+      overflow: hidden;
+      border: 1px solid #edf0f3;
+      margin: 0;
+    }
+
+    .hero{
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background:#dbeafe;
+      overflow: hidden;
+    }
+    .hero img{
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display:block;
+    }
+
+    .caixa-esquerda{
+      position: absolute; 
+      left: 16px; 
+      bottom: 16px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      min-width: 240px;
+    }
+    .hotel-nome{ 
+        font-weight: 800; 
+        font-size: 14px; 
+    }
+
+    .linha{ 
+        display:flex; 
+        align-items:center; 
+        gap:8px; 
+        margin-top:6px; 
+    }
+
+    .plaquinha{
+      background: #10b981;
+      color:#fff; 
+      font-weight:700; 
+      font-size:12px;
+      border-radius: 6px; 
+      padding:2px 6px;
+    }
+    .estrelas{ 
+        color: #fbbf24; 
+        font-size:14px; 
+        letter-spacing:1px; 
+    }
+
+    .textinho{ 
+        display:block; 
+        font-size:11px; 
+        color:#6b7280; 
+        margin-top:4px; 
+    }
+
+    .caixa-direita{
+      position: absolute; 
+      right: 16px; 
+      bottom: 16px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      text-align:left;
+      min-width: 180px;
+    }
+
+    .pacote{ 
+        font-size:10px; 
+        font-weight:800; 
+        color:#111827; 
+    }
+
+    .por-pessoa{ 
+        font-size:11px; 
+        color:#6b7280; 
+        margin-top:4px; 
+        display:block; 
+    }
+
+    .preço{ 
+        font-size:16px; 
+        font-weight:800; 
+        color:#111827; 
+        margin-top:6px; 
+    }
+
+    .bloco{
+      padding: 18px 18px 10px;
+      border-top:1px solid #e5e7eb;
+    }
+
+    .bloco:first-of-type{
+        border-top:none
+    }
+
+    .bloco h3{
+      font-size:12px; 
+      letter-spacing:.04em; 
+      text-transform:uppercase; 
+      color:#111827; 
+      margin:0 0 12px; 
+      font-weight:800;
+    }
+
+    .condiçoes{
+      display:grid; 
+      grid-template-columns: repeat(8, 1fr); 
+      gap: 18px;
+      border-top:1px solid #e5e7eb; 
+      border-bottom:1px solid #e5e7eb;
+      padding: 12px 0; 
+      margin-top: 15px;
+    }
+
+    .condiçao{ 
+        text-align:center; 
+        font-size:12px; 
+        color:#111827; 
+    }
+
+    .condiçao-small{ 
+        display:block; 
+        color:#6b7280; 
+        margin-top:2px; 
+    }
+
+    .divisao {
+      width: 1px;
+      background: #e5e7eb;
+      margin: 0 8px;
+    }
+
+    .conditions p{ 
+        margin: 6px 0; 
+        font-size:13px; 
+        color:#111827; 
+    }
+
+    .conditions b{ 
+        font-weight:800; 
+        color: #416ccf; 
+    }
+
+    .descriçao p{ 
+        margin: 10px 0; 
+        font-size:14px; 
+        color:#374151; 
+        line-height:1.6; 
+    }
+
+    .açao{ 
+        display:flex; 
+        justify-content:center; 
+        padding: 8px 18px 22px; 
+    }
+
+    .botao{
+      background: #5b86e5;
+      border:none; 
+      color:#fff; 
+      font-weight:800; 
+      letter-spacing:.02em;
+      padding: 12px 28px; 
+      border-radius: 999px; 
+      cursor:pointer; 
+      box-shadow: 0 6px 18px rgba(91,134,229,.35);
+    }
+    .botao:hover{ 
+        background: #416ccf; 
+    }
+
+    .quarto-bloco{
+      background: #fff;
+      border-radius: 0; 
+      box-shadow: 0 10px 24px rgba(0,0,0,.10);
+      margin-top: 22px; 
+      padding: 10px; 
+      border:1px solid #edf0f3;
+      display: grid; 
+      grid-template-columns: 160px 1fr; 
+      gap: 12px; 
+      align-items: center;
+    }
+
+    .quarto-foto{ 
+        width:100%; 
+        height:110px; 
+        object-fit:cover; 
+        display:block; 
+    }
+    .quarto-titulo{ 
+        color: #416ccf; 
+        font-weight:800; 
+        font-size:13px; 
+        text-transform:uppercase; 
+        letter-spacing:.02em; 
+    }
+    .quarto-pessoas{ 
+        color:#6b7280; 
+        font-size:12px; 
+        margin-top:6px; 
+    }
+    .quarto-caracteristicas{ 
+        display:flex; 
+        flex-wrap:wrap; 
+        gap:16px; 
+        margin-top:10px; 
+        font-size:12px; 
+        color:#111827; 
+    }
+    .quarto-caracteristicas span{
+        position:relative; 
+        padding-left:18px; 
+    }
+    .rquarto-caracteristicas span:before{ 
+        content:"•"; 
+        position:absolute; 
+        left:6px; 
+        top:-1px; 
+    }
+
+    @media (max-width: 560px){
+      .hero{ height: 200px; }
+      .caixa-direita{ min-width: 200px; }
+      .condiçoes{ grid-template-columns: repeat(2, 1fr); }
+      .quarto-bloco{ grid-template-columns: 1fr; }
+      .quarto-foto{ height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+
+
+    <header>
+    <div class="logo">VOYAGER</div>
+    <nav id="nav-links">
+        <a href="#">Início</a>
+        <a href="#">Sobre nós</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+
+
+  <h1 class="pagina-titulo">PACOTE ESCOLHIDO</h1>
+
+  <section class="card">
+    <div class="hero">
+      <img src="hotel4.PNG" alt="" />
+
+      <div class="caixa-esquerda">
+        <div class="hotel-nome">HOTEL VALENCIA</div>
+        <div class="linha">
+          <span class="plaquinha">5.0</span>
+          <span class="estrelas">★★★★★</span>
+        </div>
+        <small class="textinho">São Paulo - Brasil</small>
+      </div>
+
+      <div class="caixa-direita">
+        <div class="pacote">VOO + HOSPEDAGEM</div>
+        <span class="por-pessoa">Preço por pessoa</span>
+        <div class="preco">R$ 5.799,00</div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <h3>A HOSPEDAGEM OFERECE</h3>
+      <div class="condiçoes">
+        <div class="condiçao">Estacionamento</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Ar condicionado</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Piscina</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Wi‑fi grátis</div>
+      </div>
+    </div>
+
+    <div class="section conditions">
+      <h3>CONDIÇÕES DA HOSPEDAGEM</h3>
+      <p>Horário de Check in: <b>14:00</b></p>
+      <p>Horário de Check out: <b>12:00</b></p>
+      <p>Café da manhã: <b>Das 7:00 às 10:00</b></p>
+    </div>
+
+    <div class="section descriçao">
+      <h3>CONHEÇA UM POUCO MAIS</h3>
+      <p>O hotel Valencia está localizado em São Paulo, na Praia de Ubatuba. Ele oferece duas piscinas adulto e infantil, hidromassagem e sauna.</p>
+      <p>O café da manhã é servido com opções de pãezinhos, frios e frutas, bem como bebidas quentes e frias. O hotel também possui um restaurante e o bar da piscina, ambos com especialidades da culinária paulista.</p>
+      <p>A propriedade também conta com salão de eventos, uma capela e espaço kids climatizado, além de traslado gratuito à Praia de Santos.</p>
+    </div>
+
+    <div class="açao">
+      <button class="botao">COMPRAR</button>
+    </div>
+  </section>
+
+  <section class="quarto-bloco">
+    <img class="quarto-foto" src="Quarto.PNG" alt="" />
+    <div>
+      <div class="quarto-titulo">APARTAMENTO STANDARD COM VISTA EXTERNA</div>
+      <div class="quarto-pessoas">2 pessoas em 1 quarto</div>
+      <div class="quarto-pessoas">Superfície: 24 m²</div>
+      <div class="quarto-caracteristicas">
+        <span>TV</span>
+        <span>Wi‑Fi grátis</span>
+        <span>Varanda</span>
+        <span>Ar condicionado</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
