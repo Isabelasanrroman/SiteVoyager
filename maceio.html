@@ -12,6 +12,7 @@
     padding: 0;
 }
 
+    
     header {
         background-color: rgb(255, 255, 255);
         display: flex;
@@ -129,10 +130,9 @@
         color: #00416a;
         font-size: 18px;
         font-weight: bold;
-        margin-top: 20px;
     }
 
-    .botton {
+    .detail {
         color: #0077cc;
         font-size: 12px;
         cursor: pointer;
@@ -176,93 +176,6 @@
     background: #0077cc;
 }
 
-
-
-
-
-
-.valor {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.valor img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 3px solid #ffffff;
-}
-
-.valor-info {
-    flex: 1;
-    padding-right: 15px;
-}
-
-.valor-info h3 {
-    color: #00416a;
-    margin: 0 0 5px 0;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.valor-info p {
-    font-size: 13px;
-    margin: 2px 0;
-    color: #333;
-}
-
-.valor-price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
-    align-items: flex-start;
-}
-
-.valor-price .preco {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00416a;
-}
-
-.valor-price .old {
-    text-decoration: line-through;
-    font-size: 13px;
-    color: gray;
-    margin-top: 3px;
-}
-
-.valor-price .parcelado {
-    font-size: 13px;
-    color: #0077cc;
-    margin-top: 3px;
-}
-
-
-.btn-detail {
-    display: inline-block;
-    background: #6da9d6;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 8px 18px;
-    text-decoration: none;
-    border-radius: 3px;
-    margin-top: 10px;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.btn-detail:hover {
-    background: #00416a;
-}
-
-
-
-
-
 </style>
 </head>
 <body>
@@ -276,21 +189,22 @@
     </nav>
 </header>
 
-
- <h1>PACOTE ESCOLIDO</h1>
+    <h1>PACOTE ESCOLIDO</h1>
 
     <div class="card">
         <div class="section">
             <div class="title">Hospedagem</div>
             <div class="hotel-info">
-                <img src="FozDoIguaçu.PNG" alt="">
+                <img src="imagens/hotel44.PNG" alt="">
                 <div class="hotel-details">
-                    <h2>HOTEL CONTINENTAL</h2>
+                    <h2>HOTEL MERIDIANO</h2>
                     <div class="rating">
-                        <span>4.0</span>
-                        <div class="stars">★★★★</div>
+                        <span>5.0</span>
+                        <div class="stars">★★★★★</div>
                     </div>
-                    <div>15 DIAS / 14 NOITES</div>
+                    <div>8 DIAS / 7 NOITES</div>
+                    <div class="price">R$ 5.499,00</div>
+                    <a href="site_maceio2.html" class="detail">VER DETALHE</a>
                 </div>
             </div>
         </div>
@@ -310,34 +224,105 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 <div class="card">
-    <div class="section">
-        <div class="title">Valor</div>
-        <div class="valor">
-            <img src="hotel2222.PNG" alt="Imagem hotel piscina">
-            <div class="valor-info">
-                <h3>VOO + HOSPEDAGEM</h3>
-                <p>Preço por pessoa</p>
-                <p style="font-size:12px;color:#555;">Esse valor não inclui impostos, taxas e encargos</p>
+        <div class="section">
+            <div class="title">Hospedagem</div>
+            <div class="hotel-info">
+                <img src="imagens/hotel33.PNG" alt="">
+                <div class="hotel-details">
+                    <h2>HOTEL PONTA VERDE</h2>
+                    <div class="rating">
+                        <span>5.0</span>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <div>8 DIAS / 7 NOITES</div>
+                    <div class="price">R$ 5.299,00</div>
+                    <a href="site_maceio3.html" class="detail">VER DETALHE</a>
+                </div>
             </div>
-            <div class="valor-price">
-                <div class="preco">R$ 2.199,00</div>
-                <div class="old">R$ 3.199,00</div>
-                <div class="parcelado">6x sem juros</div>
-                <a href="index_pag3.html" class="btn-detail">VER DETALHE</a>
+        </div>
+        <div class="section">
+            <div class="title">Voo</div>
+            <div class="flight">
+                <div class="flight-row">
+                    <div>VCP<br><strong>01:35</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>COP<br><strong>02:35</strong></div>
+                </div>
+                <div class="flight-row">
+                    <div>COP<br><strong>18:00</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>VCP<br><strong>19:00</strong></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
-
+<div class="card">
+        <div class="section">
+            <div class="title">Hospedagem</div>
+            <div class="hotel-info">
+                <img src="imagens/hotel22.PNG" alt="">
+                <div class="hotel-details">
+                    <h2>HOTEL VERANO</h2>
+                    <div class="rating">
+                        <span>3.0</span>
+                        <div class="stars">★★★</div>
+                    </div>
+                    <div>8 DIAS / 7 NOITES</div>
+                    <div class="price">R$ 2.199,00</div>
+                    <a href="site_maceio4.html" class="detail">VER DETALHE</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">Voo</div>
+            <div class="flight">
+                <div class="flight-row">
+                    <div>VCP<br><strong>01:35</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>COP<br><strong>02:35</strong></div>
+                </div>
+                <div class="flight-row">
+                    <div>COP<br><strong>18:00</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>VCP<br><strong>19:00</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="card">
+        <div class="section">
+            <div class="title">Hospedagem</div>
+            <div class="hotel-info">
+                <img src="imagens/hotel11.PNG" alt="">
+                <div class="hotel-details">
+                    <h2>HOTEL PACÍFICO</h2>
+                    <div class="rating">
+                        <span>2.0</span>
+                        <div class="stars">★★</div>
+                    </div>
+                    <div>8 DIAS / 7 NOITES</div>
+                    <div class="price">R$ 1.499,00</div>
+                    <a href="site_maceio5.html" class="detail">VER DETALHE</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="title">Voo</div>
+            <div class="flight">
+                <div class="flight-row">
+                    <div>VCP<br><strong>01:35</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>COP<br><strong>05:35</strong></div>
+                </div>
+                <div class="flight-row">
+                    <div>COP<br><strong>18:00</strong></div>
+                    <div class="direct">Direto</div>
+                    <div>VCP<br><strong>22:00</strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

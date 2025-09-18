@@ -12,7 +12,6 @@
     padding: 0;
 }
 
-    
     header {
         background-color: rgb(255, 255, 255);
         display: flex;
@@ -130,9 +129,10 @@
         color: #00416a;
         font-size: 18px;
         font-weight: bold;
+        margin-top: 20px;
     }
 
-    .detail {
+    .botton {
         color: #0077cc;
         font-size: 12px;
         cursor: pointer;
@@ -176,6 +176,93 @@
     background: #0077cc;
 }
 
+
+
+
+
+
+.valor {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.valor img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+}
+
+.valor-info {
+    flex: 1;
+    padding-right: 15px;
+}
+
+.valor-info h3 {
+    color: #00416a;
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.valor-info p {
+    font-size: 13px;
+    margin: 2px 0;
+    color: #333;
+}
+
+.valor-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+    align-items: flex-start;
+}
+
+.valor-price .preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00416a;
+}
+
+.valor-price .old {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: gray;
+    margin-top: 3px;
+}
+
+.valor-price .parcelado {
+    font-size: 13px;
+    color: #0077cc;
+    margin-top: 3px;
+}
+
+
+.btn-detail {
+    display: inline-block;
+    background: #6da9d6;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-detail:hover {
+    background: #00416a;
+}
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -189,13 +276,14 @@
     </nav>
 </header>
 
-    <h1>PACOTE ESCOLIDO</h1>
+
+ <h1>PACOTE ESCOLIDO</h1>
 
     <div class="card">
         <div class="section">
             <div class="title">Hospedagem</div>
             <div class="hotel-info">
-                <img src="hotel4.PNG" alt="Hotel Valencia">
+                <img src="imagens/SaoPaulo.PNG" alt="">
                 <div class="hotel-details">
                     <h2>HOTEL VALENCIA</h2>
                     <div class="rating">
@@ -203,8 +291,6 @@
                         <div class="stars">★★★★★</div>
                     </div>
                     <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 5.799,00</div>
-                    <a href="site_saopaulo2.html" class="btn-detail">VER DETALHE</a>
                 </div>
             </div>
         </div>
@@ -224,105 +310,34 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
 <div class="card">
-        <div class="section">
-            <div class="title">Hospedagem</div>
-            <div class="hotel-info">
-                <img src="hotel2.PNG" alt="Hotel Atlantico">
-                <div class="hotel-details">
-                    <h2>HOTEL ATLANTICO</h2>
-                    <div class="rating">
-                        <span>4.0</span>
-                        <div class="stars">★★★★</div>
-                    </div>
-                    <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 4.299,00</div>
-                    <a href="site_saopaulo3.html" class="btn-detail">VER DETALHE</a>
-                </div>
+    <div class="section">
+        <div class="title">Valor</div>
+        <div class="valor">
+            <img src="imagens/hotel4.PNG" alt="Imagem hotel piscina">
+            <div class="valor-info">
+                <h3>VOO + HOSPEDAGEM</h3>
+                <p>Preço por pessoa</p>
+                <p style="font-size:12px;color:#555;">Esse valor não inclui impostos, taxas e encargos</p>
             </div>
-        </div>
-        <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
-                <div class="flight-row">
-                    <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>COP<br><strong>02:35</strong></div>
-                </div>
-                <div class="flight-row">
-                    <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>VCP<br><strong>19:00</strong></div>
-                </div>
+            <div class="valor-price">
+                <div class="preco">R$ 5.799,00</div>
+                <div class="old">R$ 6.400,00</div>
+                <div class="parcelado">6x sem juros</div>
+                <a href="pag3_SP.html" class="btn-detail">VER DETALHE</a>
             </div>
         </div>
     </div>
-<div class="card">
-        <div class="section">
-            <div class="title">Hospedagem</div>
-            <div class="hotel-info">
-                <img src="hotel3.PNG" alt="Hotel Paraíso">
-                <div class="hotel-details">
-                    <h2>HOTEL PARAÍSO</h2>
-                    <div class="rating">
-                        <span>3.0</span>
-                        <div class="stars">★★★</div>
-                    </div>
-                    <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 2.299,00</div>
-                    <a href="site_saopaulo4.html" class="btn-detail">VER DETALHE</a>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
-                <div class="flight-row">
-                    <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>COP<br><strong>02:35</strong></div>
-                </div>
-                <div class="flight-row">
-                    <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>VCP<br><strong>19:00</strong></div>
-                </div>
-            </div>
-        </div>
-    </div>
-<div class="card">
-        <div class="section">
-            <div class="title">Hospedagem</div>
-            <div class="hotel-info">
-                <img src="hotel1.PNG" alt="Hotel Jardim Europa">
-                <div class="hotel-details">
-                    <h2>HOTEL JARDIM EUROPA</h2>
-                    <div class="rating">
-                        <span>4.0</span>
-                        <div class="stars">★★★★</div>
-                    </div>
-                    <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 2.999,00</div>
-                    <a href="site_saopaulo5.html" class="btn-detail">VER DETALHE</a>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
-                <div class="flight-row">
-                    <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>COP<br><strong>02:35</strong></div>
-                </div>
-                <div class="flight-row">
-                    <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>VCP<br><strong>19:00</strong></div>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+
+
+
 
 </body>
 </html>
