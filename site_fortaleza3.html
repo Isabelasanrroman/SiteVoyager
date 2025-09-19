@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pacote Escolhido</title>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f5f4;
-    margin: 0;
-    padding: 0;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacote Escolhido</title>
+  <style>
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f5f4;
+      color:#2b2b2b;
+    }
+
 
     header {
-        background-color: rgb(255, 255, 255);
+        background-color: #ffffff;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 14px 40px;
+        position: sticky;
         top: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .logo {
@@ -30,7 +35,7 @@
 
     nav {
         display: flex;
-        gap: 50px;
+        gap: 20px;
     }
 
     nav a {
@@ -45,299 +50,353 @@
         color: #6da9d6;
     }
 
-    h1 {
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 30px;
-        margin-top: 40px;
+
+
+    h1.pagina-titulo{
+      text-align:center;
+      font-size: 20px;
+      letter-spacing:.08em;
+      color:#111827;
+      margin: 20px 0;
+      font-weight:700;
     }
 
-    .card {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    margin-bottom: 30px;  
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 1200px;  
-    width: 90%;      
-}
-    .section {
-        flex: 1;
-        padding: 10px;
+    .card{
+      background:#fff;
+      border-radius: 0;
+      box-shadow: 0 10px 24px rgba(0,0,0,.10);
+      overflow: hidden;
+      border: 1px solid #edf0f3;
+      margin: 0;
     }
 
-    .section:not(:last-child) {
-        border-right: 1px solid #ddd;
+    .hero{
+      position: relative;
+      width: 100%;
+      height: 240px;
+      background:#dbeafe;
+      overflow: hidden;
+    }
+    .hero img{
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      display:block;
     }
 
-    .title {
-        font-weight: bold;
-        color: #00416a;
-        margin-bottom: 15px;
+    .caixa-esquerda{
+      position: absolute; 
+      left: 16px; 
+      bottom: 16px;
+      background: #fff;
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      min-width: 240px;
+    }
+    .hotel-nome{ 
+        font-weight: 800; 
+        font-size: 14px; 
     }
 
-    .hotel-info {
-        display: flex;
-        gap: 25px;
-        align-items: center;
+    .linha{ 
+        display:flex; 
+        align-items:center; 
+        gap:8px; 
+        margin-top:6px; 
     }
 
-    .hotel-info img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border: 3px solid #ffffff;
-        border-radius: 5px;
+    .plaquinha{
+      background: #10b981;
+      color:#fff; 
+      font-weight:700; 
+      font-size:12px;
+      border-radius: 6px; 
+      padding:2px 6px;
+    }
+    .estrelas{ 
+        color: #fbbf24; 
+        font-size:14px; 
+        letter-spacing:1px; 
     }
 
-    .hotel-details {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+    .textinho{ 
+        display:block; 
+        font-size:11px; 
+        color:#6b7280; 
+        margin-top:4px; 
     }
 
-    .hotel-details h2 {
-        font-size: 15px;
-        margin: 0;
+    .caixa-direita{
+      position: absolute; 
+      right: 16px; 
+      bottom: 16px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      text-align:left;
+      min-width: 180px;
     }
 
-    .rating {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    .pacote{ 
+        font-size:10px; 
+        font-weight:800; 
+        color:#416ccf; 
     }
 
-    .rating span {
-        background: #e6f0ff;
-        color: #00416a;
-        padding: 3px 8px;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: bold;
+    .por-pessoa{ 
+        font-size:11px; 
+        color:#6b7280; 
+        margin-top:4px; 
+        display:block; 
     }
 
-    .stars {
-        color: gold;
-        font-size: 14px;
+    .preço{ 
+        font-size:16px; 
+        font-weight:800; 
+        color:#111827; 
+        margin-top:6px; 
     }
 
-    .price {
-        color: #00416a;
-        font-size: 18px;
-        font-weight: bold;
-        margin-top: 20px;
+    .bloco{
+      padding: 18px 18px 10px;
+      border-top:1px solid #e5e7eb;
     }
 
-    .botton {
-        color: #0077cc;
-        font-size: 12px;
-        cursor: pointer;
-        text-decoration: none;
+    .bloco:first-of-type{
+        border-top:none
     }
 
-    .flight {
-        display: flex;
-        flex-direction: column;
-        gap: 19px;
+    .bloco h3{
+      font-size:12px; 
+      letter-spacing:.04em; 
+      text-transform:uppercase; 
+      color:#111827; 
+      margin:0 0 12px; 
+      font-weight:800;
     }
 
-    .flight-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 80px;
+    .condiçoes{
+      display:grid; 
+      grid-template-columns: repeat(8, 1fr); 
+      gap: 18px;
+      border-top:1px solid #e5e7eb; 
+      border-bottom:1px solid #e5e7eb;
+      padding: 12px 0; 
+      margin-top: 15px;
     }
 
-    .flight-row div {
-        text-align: center;
+    .condiçao{ 
+        text-align:center; 
+        font-size:12px; 
+        color:#111827; 
     }
 
-    .direct {
-    position: relative;
-    color: #0077cc;        
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;  
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
+    .condiçao-small{ 
+        display:block; 
+        color:#6b7280; 
+        margin-top:2px; 
+    }
 
-.direct::before,
-.direct::after {
-    content: "";
-    display: block;
-    width: 100px;  
-    height: 2px;
-    background: #0077cc;
-}
+    .divisao {
+      width: 1px;
+      background: #e5e7eb;
+      margin: 0 8px;
+    }
 
+    .conditions p{ 
+        margin: 6px 0;
+        padding: 8px 40px; 
+        font-size:13px; 
+        color:#111827; 
+    }
 
+    .conditions b{ 
+        font-weight:800; 
+        color: #416ccf; 
+    }
 
+    .conditions h3{
+      padding: 2px 20px;
+    }
 
+    .descriçao p{ 
+        margin: 10px 0;
+        padding: 2px 40px;
+        font-size:14px; 
+        color:#374151; 
+        line-height:1.6; 
+    }
 
+    .descriçao h3 {
+      padding: 2px 20px;
+    }
 
-.valor {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
+    .açao{ 
+        display:flex; 
+        justify-content:center; 
+        padding: 8px 18px 22px; 
+    }
 
-.valor img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 3px solid #ffffff;
-}
+    .botao{
+      background: #5b86e5;
+      border:none; 
+      color:#fff; 
+      font-weight:800; 
+      letter-spacing:.02em;
+      padding: 12px 28px; 
+      border-radius: 999px; 
+      cursor:pointer; 
+      box-shadow: 0 6px 18px rgba(91,134,229,.35);
+    }
+    .botao:hover{ 
+        background: #416ccf; 
+    }
 
-.valor-info {
-    flex: 1;
-    padding-right: 15px;
-}
+    .quarto-bloco{
+      background: #fff;
+      border-radius: 0; 
+      box-shadow: 0 10px 24px rgba(0,0,0,.10);
+      margin-top: 32px; 
+      padding: 70px; 
+      border:1px solid #edf0f3;
+      display: grid; 
+      grid-template-columns: 160px 1fr; 
+      gap: 18px; 
+      align-items: center;
+    }
 
-.valor-info h3 {
-    color: #00416a;
-    margin: 0 0 5px 0;
-    font-size: 15px;
-    font-weight: bold;
-}
+    .quarto-foto{ 
+        width:160px; 
+        height:150px; 
+        object-fit:cover; 
+        display:block; 
+    }
+    .quarto-titulo{ 
+        color: #416ccf; 
+        font-weight:800; 
+        font-size:16px; 
+        text-transform:uppercase; 
+        letter-spacing:.02em; 
+    }
+    .quarto-pessoas{ 
+        color:#6b7280; 
+        font-size:14px;
+        padding-left: 16px; 
+        margin-top:6px;
+    }
+    .quarto-caracteristicas{ 
+        display:flex; 
+        flex-wrap:wrap; 
+        gap:10px;
+        margin-top:10px; 
+        font-size:14px; 
+        color:#111827; 
+    }
+    .quarto-caracteristicas span{
+        position:relative; 
+        padding-left:18px; 
+    }
+    .rquarto-caracteristicas span:before{ 
+        content:"•"; 
+        position:absolute; 
+        left:6px; 
+        top:-1px; 
+    }
 
-.valor-info p {
-    font-size: 13px;
-    margin: 2px 0;
-    color: #333;
-}
-
-.valor-price {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 15px;
-    align-items: flex-start;
-}
-
-.valor-price .preco {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00416a;
-}
-
-.valor-price .old {
-    text-decoration: line-through;
-    font-size: 13px;
-    color: gray;
-    margin-top: 3px;
-}
-
-.valor-price .parcelado {
-    font-size: 13px;
-    color: #0077cc;
-    margin-top: 3px;
-}
-
-
-.btn-detail {
-    display: inline-block;
-    background: #6da9d6;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 8px 18px;
-    text-decoration: none;
-    border-radius: 3px;
-    margin-top: 10px;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.btn-detail:hover {
-    background: #00416a;
-}
-
-
-
-
-
-</style>
+    @media (max-width: 560px){
+      .hero{ height: 200px; }
+      .caixa-direita{ min-width: 200px; }
+      .condiçoes{ grid-template-columns: repeat(2, 1fr); }
+      .quarto-bloco{ grid-template-columns: 1fr; }
+      .quarto-foto{ height: 160px; }
+    }
+  </style>
 </head>
 <body>
-    
-<header>
+
+
+
+    <header>
     <div class="logo">VOYAGER</div>
     <nav id="nav-links">
-        <a href="#">Início</a>
+        <a href="index.html">Início</a>
         <a href="#">Sobre nós</a>
         <a href="#">Contato</a>
     </nav>
 </header>
 
 
- <h1>PACOTE ESCOLIDO</h1>
 
-    <div class="card">
-        <div class="section">
-            <div class="title">Hospedagem</div>
-            <div class="hotel-info">
-                <img src="imagens/Fortaleza.PNG" alt="">
-                <div class="hotel-details">
-                    <h2>HOTEL MARINA PARK</h2>
-                    <div class="rating">
-                        <span>5.0</span>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                    <div>8 DIAS / 7 NOITES</div>
-                </div>
-            </div>
+  <h1 class="pagina-titulo">PACOTE ESCOLHIDO</h1>
+
+  <section class="card">
+    <div class="hero">
+      <img src="CC5" alt="" />
+
+      <div class="caixa-esquerda">
+        <div class="hotel-nome">HOTEL MARINA PARK</div>
+        <div class="linha">
+          <span class="plaquinha">5.0</span>
+          <span class="estrelas">★★★★★</span>
         </div>
-        <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
-                <div class="flight-row">
-                    <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>COP<br><strong>02:35</strong></div>
-                </div>
-                <div class="flight-row">
-                    <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
-                    <div>VCP<br><strong>19:00</strong></div>
-                </div>
-            </div>
-        </div>
+        <small class="textinho">Fortaleza - Brasil</small>
+      </div>
+
+      <div class="caixa-direita">
+        <div class="pacote">VOO + HOSPEDAGEM</div>
+        <span class="por-pessoa">Preço por pessoa</span>
+        <div class="preco">R$ 3.799,00</div>
+      </div>
     </div>
 
-
-
-
-
-
-<div class="card">
-    <div class="section">
-        <div class="title">Valor</div>
-        <div class="valor">
-            <img src="imagens/hotel444.PNG" alt="Imagem hotel piscina">
-            <div class="valor-info">
-                <h3>VOO + HOSPEDAGEM</h3>
-                <p>Preço por pessoa</p>
-                <p style="font-size:12px;color:#555;">Esse valor não inclui impostos, taxas e encargos</p>
-            </div>
-            <div class="valor-price">
-                <div class="preco">R$ 3.799,00</div>
-                <div class="old">R$ 4.499,00</div>
-                <div class="parcelado">6x sem juros</div>
-                <a href="index_pag3.html" class="btn-detail">VER DETALHE</a>
-            </div>
-        </div>
+    <div class="bloco">
+      <h3>A HOSPEDAGEM OFERECE</h3>
+      <div class="condiçoes">
+        <div class="condiçao">Estacionamento</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Ar condicionado</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Piscina</div>
+        <div class="divisao" aria-hidden="true"></div>
+        <div class="condiçao">Wi‑fi grátis</div>
+      </div>
     </div>
-</div>
 
+    <div class="section conditions">
+      <h3>CONDIÇÕES DA HOSPEDAGEM</h3>
+      <p>Horário de Check in: <b>14:00</b></p>
+      <p>Horário de Check out: <b>14:00</b></p>
+      <p>Café da manhã: <b>Das 7:00 às 10:00</b></p>
+    </div>
 
+    <div class="section descriçao">
+      <h3>CONHEÇA UM POUCO MAIS</h3>
+      <p>O hotel Valencia está localizado em São Paulo, na Praia de Ubatuba. Ele oferece duas piscinas adulto e infantil, hidromassagem e sauna.</p>
+      <p>O café da manhã é servido com opções de pãezinhos, frios e frutas, bem como bebidas quentes e frias. O hotel também possui um restaurante e o bar da piscina, ambos com especialidades da culinária paulista.</p>
+      <p>A propriedade também conta com salão de eventos, uma capela e espaço kids climatizado, além de traslado gratuito à Praia de Santos.</p>
+    </div>
 
+    <div class="açao">
+      <button class="botao">COMPRAR</button>
+    </div>
+  </section>
+
+  <section class="quarto-bloco">
+    <img class="quarto-foto" src="https://i.pinimg.com/236x/aa/77/cf/aa77cf36c10705af8ddf0d4d0faacdc3.jpg" alt="" />
+    <div>
+      <div class="quarto-titulo">APARTAMENTO STANDARD COM VISTA EXTERNA</div>
+      <div class="quarto-pessoas">4 pessoas em 1 quarto</div>
+      <div class="quarto-pessoas">Superfície: 30 m²</div>
+      <div class="quarto-caracteristicas">
+        <span>TV</span>
+        <span>Wi‑Fi grátis</span>
+        <span>Varanda</span>
+        <span>Ar condicionado</span>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
