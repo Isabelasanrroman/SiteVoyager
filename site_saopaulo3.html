@@ -88,7 +88,7 @@ body {
 
 .imagem-hotel {
   background-image: url('imagens/CC2.PNG');
-  background-size: cover;
+  background-size: auto;
   background-position: center;
   width: 100%;
   height: 210px;
@@ -232,6 +232,24 @@ body {
   background-color: #5a94c9;
 }
 
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
   </style>
 </head>
@@ -308,6 +326,37 @@ body {
   </p>
 
   <button class="botao-comprar">COMPRAR</button>
+</section>
+
+
+<section>
+    <div class="cards">
+        <div class="card">
+            <img src="imagens/quartosp21.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/quartosp22.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/quartosp23.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/quartosp24.PNG" alt="">
+        </div>
+
+        <div class="card">
+            <img src="imagens/hotelsp21.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/hotelsp22.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/hotelsp23.PNG" alt="">
+        </div>
+        <div class="card">
+            <img src="imagens/hotelsp24.PNG" alt="">
+        </div>
+    </div>
 </section>
 
 
