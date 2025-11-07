@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -10,214 +11,233 @@
 </head>
 
 <style>
-body {
-    text-align: center;
-}
+    body {
+        text-align: center;
+    }
 
-header {
-    position: relative;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10x 15px;
-    background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 100;
-}
+    header {
+        position: relative;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10x 15px;
+        background: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
 
-.logo {
-    font-weight: bold;
-    font-family: "Domine", serif;
-    font-size: 24px;
-    margin-left: 20px;
-    color: #4373d4;
-}
+    .logo {
+        font-weight: bold;
+        font-family: "Domine", serif;
+        font-size: 24px;
+        margin-left: 20px;
+        color: #4373d4;
+    }
 
-.menu {
-    font-size: 28px;
-    color: black;
-    cursor: pointer;
-    user-select: none;
-}
+    .menu {
+        font-size: 28px;
+        color: black;
+        cursor: pointer;
+        user-select: none;
+    }
 
-.menu-links {
-    display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    overflow: hidden;
-    flex-direction: column;
-}
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        flex-direction: column;
+    }
 
-.menu-links a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-weight: bold;
-    transition: background 0.3s;
-    font-family:Georgia, 'Times New Roman', Times, serif
-}
+    .menu-links a {
+        color: black;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+        font-weight: bold;
+        transition: background 0.3s;
+        font-family: Georgia, 'Times New Roman', Times, serif
+    }
 
-.menu-links a:hover {
-    background-color: #e8e8e8;
-}
+    .menu-links a:hover {
+        background-color: #e8e8e8;
+    }
 
-.menu-links.show {
-    display: flex;
-}
+    .menu-links.show {
+        display: flex;
+    }
 
-h1 {
-    font-size: 30px;
-    color: #4373d4;
-    text-align: center;
-    margin-top: 50px;
-}
+    h1 {
+        font-size: 30px;
+        color: #4373d4;
+        text-align: center;
+        margin-top: 50px;
+    }
 
-h2 {
-    font-size: 24px;
-    color: #4373d4;
-    text-align: center;
-    margin-top: 50px;
-}
+    h2 {
+        font-size: 24px;
+        color: #4373d4;
+        text-align: center;
+        margin-top: 50px;
+    }
 
-div p {
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    margin-right: 200px;
-    margin-left: 200px;
-    font-family: "Quicksand", sans-serif;
+    div p {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        margin-right: 200px;
+        margin-left: 200px;
+        font-family: "Quicksand", sans-serif;
 
-}
+    }
 
-main {
-    margin-bottom: 70px;
-}
+    main {
+        margin-bottom: 70px;
+    }
 
-img {
-    width: 30%;
-    height: 20%;
-    margin-top: 30px;
-}
+    img {
+        width: 30%;
+        height: 20%;
+        margin-top: 30px;
+    }
 
-.footer {
-    background: #213a6f;       
-    color: #eee;          
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-}
+    .footer {
+        background: #213a6f;
+        color: #eee;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+    }
 
-.footer .container {
-    display: flex;          
-    justify-content: space-between;       
-    max-width: 1000px;
-    margin: auto;
-}
+    .footer .container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: auto;
+    }
 
-.footer .coluna {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
+    .footer .coluna {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+    }
 
-.footer h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #fff;
-}
+    .footer h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #fff;
+    }
 
-.footer p {
-    margin: 5px 0;
-    color: #ccc;
-}
+    .footer p {
+        margin: 5px 0;
+        color: #ccc;
+    }
 
-.footer .copy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-    color: #aaa;
-}
-
+    .footer .copy {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        border-top: 1px solid #444;
+        padding-top: 10px;
+        color: #aaa;
+    }
 </style>
 
 <body>
     <header>
-  <div class="logo">VOYAGER</div>
-  <div class="menu" onclick="toggleMenu()">&#9776;</div>
+        <div class="logo">VOYAGER</div>
+        <div class="menu" onclick="toggleMenu()">&#9776;</div>
 
-  <div class="menu-links" id="menuLinks">
-    <a href="inicio.html">Página Inicial</a>
-    <a href="sobrenos.html">Sobre Nós</a>
-    <a href="contato.html">Contato</a>
-  </div>
-
-</header>
-
-
-    <main>   
-    <div>
-        <h1>VOYAGER</h1>
-
-        <p>A Voyager é uma empresa de viagens fundada em 2010, com sede em São Paulo, Brasil. Desde sua criação, a empresa tem se dedicado a oferecer experiências de viagem únicas e personalizadas para seus clientes, com foco na qualidade e no atendimento excepcional.</p>
-
-        <p>Com uma equipe de profissionais experientes e apaixonados, a Voyager rapidamente se estabeleceu como uma das principais líderes do mercado brasileiro de viagens. A empresa oferece uma ampla gama de serviços, incluindo pacotes de viagens nacionais e internacionais, reservas de hotéis, passagens aéreas, aluguel de carros e atividades de lazer.</p>
-
-        <p>Ao longo dos anos, a Voyager tem crescido de forma constante e sustentável, alcançando mais de 100.000 clientes satisfeitos e realizando mais de 5.000 viagens por ano. A empresa expandiu suas operações para todo o Brasil, com filiais em São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Porto Alegre e Recife, além de parcerias com mais de 100 companhias aéreas e 500 hotéis em todo o mundo.</p>
-
-        <p>A Voyager é membro da Associação Brasileira de Agências de Viagens (ABAV) e da Federação Internacional de Agências de Viagens (IFTA), o que garante aos seus clientes a qualidade e a segurança dos serviços oferecidos. Além disso, a empresa tem recebido vários prêmios e reconhecimentos ao longo dos anos, incluindo o prêmio de Melhor Agência de Viagens do Brasil, concedido pela Revista Viagem e Turismo em 2015, 2017 e 2020.</p>
-
-        <p>A Voyager está comprometida em reduzir seu impacto ambiental e promover o turismo sustentável. A empresa apoia projetos de conservação da natureza e desenvolve programas de voluntariado para seus funcionários, visando contribuir para o desenvolvimento social e econômico das comunidades locais.</p>
-
-        <div>
-            <img src="imagens/empresa.PNG" alt="">
+        <div class="menu-links" id="menuLinks">
+            <a href="inicio.html">Página Inicial</a>
+            <a href="sobrenos.html">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
         </div>
 
-        <p>Com uma equipe de mais de 500 funcionários dedicados, a Voyager continua a inovar e a se adaptar às mudanças do mercado, sempre buscando oferecer as melhores experiências de viagem para seus clientes. A empresa está preparada para enfrentar os desafios do futuro e continuar a crescer, mantendo seu compromisso com a qualidade, a inovação e a sustentabilidade.</p>
+    </header>
 
-        <p>A Voyager é uma empresa que se orgulha de sua história e de seus valores, e que continua a trabalhar para ser a melhor opção para aqueles que buscam uma experiência de viagem única e memorável. Com uma presença forte no mercado brasileiro e internacional, a Voyager é a escolha certa para quem deseja explorar o mundo de forma segura e confiável.</p>
-    
-    
-        <h2>PARCERIAS</h2>
+    <main>
         <div>
-            <img src="imagens/parcerias.PNG" alt="">
+            <h1>VOYAGER</h1>
+
+            <p>A Voyager é uma empresa de viagens fundada em 2010, com sede em São Paulo, Brasil. Desde sua criação, a
+                empresa tem se dedicado a oferecer experiências de viagem únicas e personalizadas para seus clientes,
+                com foco na qualidade e no atendimento excepcional.</p>
+
+            <p>Com uma equipe de profissionais experientes e apaixonados, a Voyager rapidamente se estabeleceu como uma
+                das principais líderes do mercado brasileiro de viagens. A empresa oferece uma ampla gama de serviços,
+                incluindo pacotes de viagens nacionais e internacionais, reservas de hotéis, passagens aéreas, aluguel
+                de carros e atividades de lazer.</p>
+
+            <p>Ao longo dos anos, a Voyager tem crescido de forma constante e sustentável, alcançando mais de 100.000
+                clientes satisfeitos e realizando mais de 5.000 viagens por ano. A empresa expandiu suas operações para
+                todo o Brasil, com filiais em São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Porto Alegre e
+                Recife, além de parcerias com mais de 100 companhias aéreas e 500 hotéis em todo o mundo.</p>
+
+            <p>A Voyager é membro da Associação Brasileira de Agências de Viagens (ABAV) e da Federação Internacional de
+                Agências de Viagens (IFTA), o que garante aos seus clientes a qualidade e a segurança dos serviços
+                oferecidos. Além disso, a empresa tem recebido vários prêmios e reconhecimentos ao longo dos anos,
+                incluindo o prêmio de Melhor Agência de Viagens do Brasil, concedido pela Revista Viagem e Turismo em
+                2015, 2017 e 2020.</p>
+
+            <p>A Voyager está comprometida em reduzir seu impacto ambiental e promover o turismo sustentável. A empresa
+                apoia projetos de conservação da natureza e desenvolve programas de voluntariado para seus funcionários,
+                visando contribuir para o desenvolvimento social e econômico das comunidades locais.</p>
+
+            <div>
+                <img src="imagens/empresa.PNG" alt="">
+            </div>
+
+            <p>Com uma equipe de mais de 500 funcionários dedicados, a Voyager continua a inovar e a se adaptar às
+                mudanças do mercado, sempre buscando oferecer as melhores experiências de viagem para seus clientes. A
+                empresa está preparada para enfrentar os desafios do futuro e continuar a crescer, mantendo seu
+                compromisso com a qualidade, a inovação e a sustentabilidade.</p>
+
+            <p>A Voyager é uma empresa que se orgulha de sua história e de seus valores, e que continua a trabalhar para
+                ser a melhor opção para aqueles que buscam uma experiência de viagem única e memorável. Com uma presença
+                forte no mercado brasileiro e internacional, a Voyager é a escolha certa para quem deseja explorar o
+                mundo de forma segura e confiável.</p>
+
+
+            <h2>PARCERIAS</h2>
+            <div>
+                <img src="imagens/parcerias.PNG" alt="">
+            </div>
         </div>
-    </div>
     </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="coluna">
-      <h3>Sobre Nós</h3>
-      <p>Somos uma agência especializada em viagens personalizadas para você.</p>
-    </div>
-    <div class="coluna">
-      <h3>Contato</h3>
-      <p>Email: contato@voyager.com</p>
-      <p>Telefone: (11) 99999-9999</p>
-    </div>
-    <div class="coluna">
-      <h3>Endereço</h3>
-      <p>Av. Conceição, 125</p>
-      <p>São Paulo - SP</p>
-    </div>
-  </div>
-  <div class="copy">
-    <p>© 2025 Voyager - Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="coluna">
+                <h3>Sobre Nós</h3>
+                <p>Somos uma agência especializada em viagens personalizadas para você.</p>
+            </div>
+            <div class="coluna">
+                <h3>Contato</h3>
+                <p>Email: contato@voyager.com</p>
+                <p>Telefone: (11) 99999-9999</p>
+            </div>
+            <div class="coluna">
+                <h3>Endereço</h3>
+                <p>Av. Conceição, 125</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="copy">
+            <p>2025 Voyager - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 
 </body>
 <script>
-function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-}
+    function toggleMenu() {
+        const menu = document.getElementById("menuLinks");
+        menu.classList.toggle("show");
+    }
 </script>
+
 </html>

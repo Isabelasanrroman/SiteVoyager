@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,237 +8,232 @@
 
   <style>
     header {
-    height: 40px;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 5px 12px rgb(207, 207, 207);
-    z-index: 100;
-}
+      height: 40px;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 5px 12px rgb(207, 207, 207);
+      z-index: 100;
+    }
 
-.logo {
-    font-weight: bold;
-    font-family: "Domine", serif;
-    font-size: 24px;
-    margin-left: 20px;
-    color: #3464ab;
-}
+    .logo {
+      font-weight: bold;
+      font-family: "Domine", serif;
+      font-size: 24px;
+      margin-left: 20px;
+      color: #3464ab;
+    }
 
-.menu {
-    font-size: 28px;
-    color: black;
-    cursor: pointer;
-    user-select: none;
-}
+    .menu {
+      font-size: 28px;
+      color: black;
+      cursor: pointer;
+      user-select: none;
+    }
 
-.menu-links {
-    display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    overflow: hidden;
-    flex-direction: column;
-}
+    .menu-links {
+      display: none;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      flex-direction: column;
+    }
 
-.menu-links a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-weight: bold;
-    transition: background 0.3s;
-}
+    .menu-links a {
+      color: black;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-.menu-links a:hover {
-    background-color: #e8e8e8;
-}
+    .menu-links a:hover {
+      background-color: #e8e8e8;
+    }
 
-.menu-links.show {
-    display: flex;
-}
-
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: rgb(247, 248, 252);
-  margin: 0;
-  padding: 0;
-}
-
-.secao-pacote {
-  width: 95%;
-  max-width: 800px;
-  margin: 30px auto;
-  text-align: center;
-}
-
-.titulo-pacote {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.imagem-hotel {
-  background-image: url('imagens/CC2222.PNG');
-  background-size: auto;
-  background-position: center;
-  width: 100%;
-  height: 200px;
-  margin-top: 50px;
-  margin-bottom: 35px;
-  border-radius: 12px;
-}
-
-.cartao-hotel {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-top: -20px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.info-esquerda {
-  text-align: left;
-}
-
-.nome-hotel {
-  color: #0077c8;
-  margin: 0;
-  font-size: 16px;
-}
-
-.avaliacao {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 5px 0;
-}
-
-.nota {
-  background-color: #0077c8;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 2px 6px;
-  font-size: 0.85rem;
-}
-
-.estrelas {
-  color: #ffc107;
-  font-size: 1rem;
-}
-
-.localizacao {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.info-direita {
-  text-align: right;
-}
-
-.titulo-pacote2 {
-  color: #333;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.preco-antigo {
-  color: #c9c9c9;
-  text-decoration: line-through;
-  font-size: 0.9rem;
-  margin: 5px 0;
-}
-
-.preco-novo {
-  color: #0077c8;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 0;
-}
+    .menu-links.show {
+      display: flex;
+    }
 
 
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: rgb(247, 248, 252);
+      margin: 0;
+      padding: 0;
+    }
 
+    .secao-pacote {
+      width: 95%;
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: center;
+    }
 
+    .titulo-pacote {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-.secao-informacoes {
-  width: 97%;
-  max-width: 850px;
-  margin: 40px auto;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    .imagem-hotel {
+      background-image: url('imagens/CC2222.PNG');
+      background-size: auto;
+      background-position: center;
+      width: 100%;
+      height: 200px;
+      margin-top: 50px;
+      margin-bottom: 35px;
+      border-radius: 12px;
+    }
 
-.subtitulo {
-  color: #333;
-  font-weight: bold;
-  text-align: left;
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
+    .cartao-hotel {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: -20px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.itens-hospedagem {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-  color: #444;
-}
+    .info-esquerda {
+      text-align: left;
+    }
 
-.linha-divisoria {
-  border: none;
-  border-top: 1px solid #ddd;
-  margin: 15px 0 25px 0;
-}
+    .nome-hotel {
+      color: #0077c8;
+      margin: 0;
+      font-size: 16px;
+    }
 
-.texto-hospedagem {
-  text-align: justify;
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
+    .avaliacao {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 5px 0;
+    }
 
-.botao-comprar {
-  background-color: #6da8de;
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 40px;
-  font-size: 0.95rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
+    .nota {
+      background-color: #0077c8;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 2px 6px;
+      font-size: 0.85rem;
+    }
 
-.botao-comprar:hover {
-  background-color: #5a94c9;
-}
+    .estrelas {
+      color: #ffc107;
+      font-size: 1rem;
+    }
 
-.imgs {
-  width: auto;
-  height: auto;
+    .localizacao {
+      color: #666;
+      font-size: 0.9rem;
+    }
 
-}
+    .info-direita {
+      text-align: right;
+    }
 
+    .titulo-pacote2 {
+      color: #333;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .preco-antigo {
+      color: #c9c9c9;
+      text-decoration: line-through;
+      font-size: 0.9rem;
+      margin: 5px 0;
+    }
+
+    .preco-novo {
+      color: #0077c8;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .secao-informacoes {
+      width: 97%;
+      max-width: 850px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .subtitulo {
+      color: #333;
+      font-weight: bold;
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .itens-hospedagem {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .linha-divisoria {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 15px 0 25px 0;
+    }
+
+    .texto-hospedagem {
+      text-align: justify;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .botao-comprar {
+      background-color: #6da8de;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 40px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+
+    .botao-comprar:hover {
+      background-color: #5a94c9;
+    }
+
+    .imgs {
+      width: auto;
+      height: auto;
+
+    }
 
     .cards {
       display: grid;
@@ -248,7 +244,7 @@ body {
     }
 
     .card {
-      box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
       margin-bottom: 30px;
     }
 
@@ -257,28 +253,23 @@ body {
       height: 200px;
       object-fit: cover;
     }
-
-    
-
-
   </style>
 </head>
 
 <body>
 
-<header>
+  <header>
     <div class="logo">VOYAGER</div>
     <div class="menu" onclick="toggleMenu()">&#9776;</div>
 
     <div class="menu-links" id="menuLinks">
-        <a href="#">Página Inicial</a>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Contato</a>
-        <a href="#">Minha Conta</a>
+      <a href="inicio.html">Página Inicial</a>
+      <a href="sobrenos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
     </div>
-</header>
+  </header>
 
-<section class="secao-pacote">
+  <section class="secao-pacote">
     <h2 class="titulo-pacote">PACOTE ESCOLHIDO</h2>
 
     <div class="imagem-hotel"></div>
@@ -300,81 +291,79 @@ body {
       </div>
     </div>
   </section>
- 
-
-
 
 
   <section class="secao-informacoes">
-  <h3 class="subtitulo">A HOSPEDAGEM OFERECE</h3>
+    <h3 class="subtitulo">A HOSPEDAGEM OFERECE</h3>
 
-  <div class="itens-hospedagem">
-    <span>Estacionamento grátis</span>
-    <span>Ar condicionado</span>
-    <span>Piscina</span>
-    <span>Wi-fi grátis</span>
-  </div>
-
-  <hr class="linha-divisoria">
-
-  <h3 class="subtitulo">CONHEÇA UM POUCO MAIS</h3>
-
-  <p class="texto-hospedagem">
-    O Eco Resort em Foz do Iguaçu é um destino ecológico perfeito para quem busca contato com a natureza. Localizado
-    em uma área preservada de mata atlântica, o resort oferece acomodações ecológicas com materiais sustentáveis, piscina
-    natural e um restaurante com pratos orgânicos. 
-  </p>
-
-  <p class="texto-hospedagem">
-    Os hóspedes podem desfrutar de atividades ao ar livre, como trilhas, passeios de bicicleta e observação de aves. Além disso, 
-    o resort oferece serviço de guia para explorar as cataratas e a região.
-  </p>
-
-  <br><br>
-
-  <div class="button">
-    <a href="comprar.html" class="botao-comprar">COMPRAR</a>
-</div>
-</section>
-    
-<section>
-    <div class="cards">
-        <div class="card">
-            <img src="imagens/quartofi21.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/quartofi22.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/quartofi23.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/quartofi24.PNG" alt="">
-        </div>
-
-        <div class="card">
-            <img src="imagens/hotelfi21.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/hotelfi22.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/hotelfi23.PNG" alt="">
-        </div>
-        <div class="card">
-            <img src="imagens/hotelfi24.PNG" alt="">
-        </div>
+    <div class="itens-hospedagem">
+      <span>Estacionamento grátis</span>
+      <span>Ar condicionado</span>
+      <span>Piscina</span>
+      <span>Wi-fi grátis</span>
     </div>
-</section>
+
+    <hr class="linha-divisoria">
+
+    <h3 class="subtitulo">CONHEÇA UM POUCO MAIS</h3>
+
+    <p class="texto-hospedagem">
+      O Eco Resort em Foz do Iguaçu é um destino ecológico perfeito para quem busca contato com a natureza. Localizado
+      em uma área preservada de mata atlântica, o resort oferece acomodações ecológicas com materiais sustentáveis,
+      piscina
+      natural e um restaurante com pratos orgânicos.
+    </p>
+
+    <p class="texto-hospedagem">
+      Os hóspedes podem desfrutar de atividades ao ar livre, como trilhas, passeios de bicicleta e observação de aves.
+      Além disso,
+      o resort oferece serviço de guia para explorar as cataratas e a região.
+    </p>
+
+    <br><br>
+
+    <div class="button">
+      <a href="comprar.html" class="botao-comprar">COMPRAR</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="cards">
+      <div class="card">
+        <img src="imagens/quartofi21.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/quartofi22.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/quartofi23.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/quartofi24.PNG" alt="">
+      </div>
+
+      <div class="card">
+        <img src="imagens/hotelfi21.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/hotelfi22.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/hotelfi23.PNG" alt="">
+      </div>
+      <div class="card">
+        <img src="imagens/hotelfi24.PNG" alt="">
+      </div>
+    </div>
+  </section>
 
 </body>
 
 <script>
-    function toggleMenu() {
+  function toggleMenu() {
     const menu = document.getElementById("menuLinks");
     menu.classList.toggle("show");
-}
+  }
 </script>
 
 </html>
-

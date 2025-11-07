@@ -1,301 +1,291 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacote Escolhido</title>
-    <style>
-/* Cabeçalho */
-.cabecalho {
-  height: 40px;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 5px 12px rgb(207, 207, 207);
-  z-index: 100;
-}
 
-.logo {
-  font-weight: bold;
-  font-family: "Domine", serif;
-  font-size: 24px;
-  margin-left: 20px;
-  color: #3464ab;
-}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacote Escolhido</title>
+  <style>
+    .cabecalho {
+      height: 40px;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 5px 12px rgb(207, 207, 207);
+      z-index: 100;
+    }
 
-.menu {
-  font-size: 28px;
-  color: black;
-  cursor: pointer;
-  user-select: none;
-}
+    .logo {
+      font-weight: bold;
+      font-family: "Domine", serif;
+      font-size: 24px;
+      margin-left: 20px;
+      color: #3464ab;
+    }
 
-.menu-links {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 0px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  flex-direction: column;
-}
+    .menu {
+      font-size: 28px;
+      color: black;
+      cursor: pointer;
+      user-select: none;
+    }
 
-.menu-links a {
-  color: black;
-  text-decoration: none;
-  padding: 15px 20px;
-  display: block;
-  font-weight: bold;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  transition: background 0.3s;
-}
+    .menu-links {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      flex-direction: column;
+    }
 
-.menu-links a:hover {
-  background-color: #e8e8e8;
-}
+    .menu-links a {
+      color: black;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      font-weight: bold;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      transition: background 0.3s;
+    }
 
-.menu-links.show {
-  display: flex;
-}
+    .menu-links a:hover {
+      background-color: #e8e8e8;
+    }
 
-/* Corpo */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: rgb(233, 234, 244);
-  margin: 0;
-  padding: 0;
-}
+    .menu-links.show {
+      display: flex;
+    }
 
-/* Seção de Informações */
-.secao-informacoes {
-  width: 99%;
-  max-width: 850px;
-  margin-left: 140px;
-  margin-top: 115px;
-  background-color: #fff;
-  padding: 25px 80px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: rgb(233, 234, 244);
+      margin: 0;
+      padding: 0;
+    }
 
-.subtitulo {
-  color: #333;
-  font-weight: bold;
-  text-align: left;
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
+    .secao-informacoes {
+      width: 99%;
+      max-width: 850px;
+      margin-left: 140px;
+      margin-top: 115px;
+      background-color: #fff;
+      padding: 25px 80px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-.linha-divisoria {
-  border: none;
-  border-top: 1px solid #c4c4c4;
-  margin: 15px 0 25px 0;
-}
+    .subtitulo {
+      color: #333;
+      font-weight: bold;
+      text-align: left;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
 
-.texto-hospedagem {
-  text-align: justify;
-  color: #444;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
+    .linha-divisoria {
+      border: none;
+      border-top: 1px solid #c4c4c4;
+      margin: 15px 0 25px 0;
+    }
 
-/* Formulário */
-section {
-  margin-bottom: 40px;
-}
+    .texto-hospedagem {
+      text-align: justify;
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
 
-.formulario {
-  gap: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+    section {
+      margin-bottom: 40px;
+    }
 
-.campo-formulario {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-bottom: 20px;
-}
+    .formulario {
+      gap: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-.campo-formulario label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: rgb(30, 30, 30);
-  text-align: left;
-  font-size: 13px;
-}
+    .campo-formulario {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-bottom: 20px;
+    }
 
-.campo-formulario input {
-  width: 70%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #cfdeff;
-  background-color: rgb(255, 255, 255);
-  font-size: 14px;
-  box-sizing: border-box;
-}
+    .campo-formulario label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: rgb(30, 30, 30);
+      text-align: left;
+      font-size: 13px;
+    }
 
-.campo-formulario select {
-  width: 70%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #cfdeff;
-  background-color: rgb(255, 255, 255);
-  font-size: 14px;
-  box-sizing: border-box;
-}
+    .campo-formulario input {
+      width: 70%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #cfdeff;
+      background-color: rgb(255, 255, 255);
+      font-size: 14px;
+      box-sizing: border-box;
+    }
 
-/* Opções de Pagamento */
-.opcoes-pagamento {
-  display: flex;
-  flex-direction: column;
-}
+    .campo-formulario select {
+      width: 70%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #cfdeff;
+      background-color: rgb(255, 255, 255);
+      font-size: 14px;
+      box-sizing: border-box;
+    }
 
-.opcao-pagamento {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+    .opcoes-pagamento {
+      display: flex;
+      flex-direction: column;
+    }
 
-.opcao-pagamento input[type="radio"] {
-  margin-right: 5px;
-}
+    .opcao-pagamento {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-.data-nascimento-group {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
+    .opcao-pagamento input[type="radio"] {
+      margin-right: 5px;
+    }
 
-.data-nascimento-group select {
-  width: 33%;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid #cfdeff;
-  background-color: rgb(255, 255, 255);
-  font-size: 14px;
-  box-sizing: border-box;
-}
+    .data-nascimento-group {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
 
-.campo-formulario-data {
-  width: 80%;
-  margin-bottom: 20px;
-  text-align: left;
-}
+    .data-nascimento-group select {
+      width: 33%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #cfdeff;
+      background-color: rgb(255, 255, 255);
+      font-size: 14px;
+      box-sizing: border-box;
+    }
 
-.campo-formulario-data label {
-  font-size: 13px;
-  margin-bottom: 10px;
-  text-align: left;
-}
+    .campo-formulario-data {
+      width: 80%;
+      margin-bottom: 20px;
+      text-align: left;
+    }
 
-/* Estilo para o botão de adicionar */
-.botao-adicionar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background-color: #3464ab;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 20px;
-}
+    .campo-formulario-data label {
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
 
-/* Alinha o título e o botão lado a lado */
-.titulo-com-botao {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    .botao-adicionar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background-color: #3464ab;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+    }
 
-/* Esconde as informações adicionais do passageiro por padrão */
-.info-adicional-passageiro {
-  display: none;
-}
+    .titulo-com-botao {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-/* Estilo para quando a seção estiver visível */
-.info-adicional-passageiro.visible {
-  display: block;
-}
+    .info-adicional-passageiro {
+      display: none;
+    }
 
-/* Estilo para os formulários de pagamento */
-.grupo-pagamento {
-  display: none;
-}
+    .info-adicional-passageiro.visible {
+      display: block;
+    }
 
-.grupo-pagamento button {
-  background-color: #6fa8fe;
-  color: #ffffff;
-  padding: 15px;
-  border: #ffffff;
-  border-radius: 28px;
-}
+    .grupo-pagamento {
+      display: none;
+    }
 
-.grupo-pagamento button:hover {
-  background-color: #5a89d6;
-  color: #ffffff;
-  padding: 15px;
-  border: #ffffff;
-  border-radius: 28px;
-}
+    .grupo-pagamento button {
+      background-color: #6fa8fe;
+      color: #ffffff;
+      padding: 15px;
+      border: #ffffff;
+      border-radius: 28px;
+    }
 
-.footer {
-    background: #213a6f;       
-    color: #eee;          
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-}
+    .grupo-pagamento button:hover {
+      background-color: #5a89d6;
+      color: #ffffff;
+      padding: 15px;
+      border: #ffffff;
+      border-radius: 28px;
+    }
 
-.footer .container {
-    display: flex;          
-    justify-content: space-between;       
-    max-width: 1000px;
-    margin: auto;
-}
+    .footer {
+      background: #213a6f;
+      color: #eee;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+    }
 
-.footer .coluna {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
+    .footer .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.footer h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #fff;
-}
+    .footer .coluna {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
 
-.footer p {
-    margin: 5px 0;
-    color: #ccc;
-}
+    .footer h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
 
-.footer .copy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-    color: #aaa;
-}
+    .footer p {
+      margin: 5px 0;
+      color: #ccc;
+    }
 
-</style>
+    .footer .copy {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      color: #aaa;
+    }
+  </style>
 
 <body>
   <header class="cabecalho">
@@ -328,7 +318,7 @@ section {
       </div>
       <div class="campo-formulario">
         <label for="sobrenome">Sobrenome</label>
-        <input type="text" id="sobrenome" placeholder="Digite seu sobrenome"/>
+        <input type="text" id="sobrenome" placeholder="Digite seu sobrenome" />
       </div>
 
       <div class="campo-formulario">
@@ -338,7 +328,7 @@ section {
 
       <div class="campo-formulario">
         <label for="numero-documento">Número do documento</label>
-        <input type="text" id="numero-documento" placeholder="Digite o número de seu documento"/>
+        <input type="text" id="numero-documento" placeholder="Digite o número de seu documento" />
       </div>
 
       <div class="campo-formulario-data">
@@ -455,228 +445,200 @@ section {
   </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="coluna">
-      <h3>Sobre Nós</h3>
-      <p>Somos uma agência especializada em viagens personalizadas para você.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="coluna">
+        <h3>Sobre Nós</h3>
+        <p>Somos uma agência especializada em viagens personalizadas para você.</p>
+      </div>
+      <div class="coluna">
+        <h3>Contato</h3>
+        <p>Email: contato@voyager.com</p>
+        <p>Telefone: (11) 99999-9999</p>
+      </div>
+      <div class="coluna">
+        <h3>Endereço</h3>
+        <p>Av. Conceição, 125</p>
+        <p>São Paulo - SP</p>
+      </div>
     </div>
-    <div class="coluna">
-      <h3>Contato</h3>
-      <p>Email: contato@voyager.com</p>
-      <p>Telefone: (11) 99999-9999</p>
+    <div class="copy">
+      <p>© 2025 Voyager - Todos os direitos reservados.</p>
     </div>
-    <div class="coluna">
-      <h3>Endereço</h3>
-      <p>Av. Conceição, 125</p>
-      <p>São Paulo - SP</p>
-    </div>
-  </div>
-  <div class="copy">
-    <p>© 2025 Voyager - Todos os direitos reservados.</p>
-  </div>
-</footer>
+  </footer>
 
 
-<script>
+  <script>
+  
+    function toggleMenu() {
+      const menu = document.getElementById("menuLinks");
+      menu.classList.toggle("show");
+    }
 
-// A maior parte do seu código original (toggleMenu, preencherPaises, preencherData, lógica Adulto 2, lógica Pagamento) permanece a mesma.
+    function preencherPaises(idSelect) {
+      fetch('paises-gentilicos-google-maps.JSON')
+        .then(response => response.json())
+        .then(data => {
+          const selectElement = document.getElementById(idSelect);
+          data.sort((a, b) => a.nome_pais.localeCompare(b.nome_pais)).forEach(pais => {
+            const option = document.createElement('option');
+            option.value = pais.nome_pais;
+            option.text = pais.nome_pais;
+            selectElement.appendChild(option);
+          });
+        });
+    }
 
-function toggleMenu() {
-  const menu = document.getElementById("menuLinks");
-  menu.classList.toggle("show");
-}
+    function preencherData(idDia, idMes, idAno) {
+      const diaSelect = document.getElementById(idDia);
+      const mesSelect = document.getElementById(idMes);
+      const anoSelect = document.getElementById(idAno);
 
-function preencherPaises(idSelect) {
-  fetch('paises-gentilicos-google-maps.JSON')
-    .then(response => response.json())
-    .then(data => {
-      const selectElement = document.getElementById(idSelect);
-      data.sort((a, b) => a.nome_pais.localeCompare(b.nome_pais)).forEach(pais => {
+      for (let i = 1; i <= 31; i++) {
         const option = document.createElement('option');
-        option.value = pais.nome_pais;
-        option.text = pais.nome_pais;
-        selectElement.appendChild(option);
+        option.value = i;
+        option.text = i;
+        diaSelect.appendChild(option);
+      }
+
+      const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+      meses.forEach((mes, index) => {
+        const option = document.createElement('option');
+        option.value = index + 1;
+        option.text = mes;
+        mesSelect.appendChild(option);
+      });
+
+      const anoAtual = new Date().getFullYear();
+      for (let i = anoAtual; i >= anoAtual - 100; i--) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.text = i;
+        anoSelect.appendChild(option);
+      }
+    }
+
+    preencherPaises('pais-residencia');
+    preencherData('dia', 'mes', 'ano');
+
+    const botaoAdicionar = document.getElementById("toggleAdulto2");
+    const formularioAdulto2 = document.getElementById("adulto2-form");
+    const tituloAdulto2 = document.querySelector(".titulo-com-botao .subtitulo");
+
+    botaoAdicionar.addEventListener("click", () => {
+      formularioAdulto2.classList.toggle("visible");
+      if (formularioAdulto2.classList.contains("visible")) {
+        preencherPaises('pais-residencia2');
+        preencherData('dia2', 'mes2', 'ano2');
+        botaoAdicionar.textContent = "-";
+        tituloAdulto2.textContent = "Adulto 2";
+      } else {
+        botaoAdicionar.textContent = "+";
+        tituloAdulto2.textContent = "Adicionar Adulto";
+      }
+    });
+
+    const opcoesPagamento = document.querySelectorAll('input[name="modo"]');
+    const perguntasCartao = document.getElementById('perguntasCartao');
+    const perguntasBoleto = document.getElementById('perguntasBoleto');
+    opcoesPagamento.forEach(opcao => {
+      opcao.addEventListener('change', (event) => {
+        perguntasCartao.style.display = 'none';
+        perguntasBoleto.style.display = 'none';
+
+        if (event.target.value === 'cartao') {
+          perguntasCartao.style.display = 'block';
+        } else if (event.target.value === 'boleto') {
+          perguntasBoleto.style.display = 'block';
+        }
       });
     });
-}
 
-function preencherData(idDia, idMes, idAno) {
-  const diaSelect = document.getElementById(idDia);
-  const mesSelect = document.getElementById(idMes);
-  const anoSelect = document.getElementById(idAno);
 
-  // Preencher dias
-  for (let i = 1; i <= 31; i++) {
-    const option = document.createElement('option');
-    option.value = i;
-    option.text = i;
-    diaSelect.appendChild(option);
-  }
-
-  // Preencher meses
-  const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-  meses.forEach((mes, index) => {
-    const option = document.createElement('option');
-    option.value = index + 1;
-    option.text = mes;
-    mesSelect.appendChild(option);
-  });
-
-  // Preencher anos
-  const anoAtual = new Date().getFullYear();
-  for (let i = anoAtual; i >= anoAtual - 100; i--) {
-    const option = document.createElement('option');
-    option.value = i;
-    option.text = i;
-    anoSelect.appendChild(option);
-  }
-}
-
-// Chamada das funções para preencher os campos do Adulto 1
-preencherPaises('pais-residencia');
-preencherData('dia', 'mes', 'ano');
-
-// Lógica para mostrar/esconder o formulário do segundo adulto
-const botaoAdicionar = document.getElementById("toggleAdulto2");
-const formularioAdulto2 = document.getElementById("adulto2-form");
-const tituloAdulto2 = document.querySelector(".titulo-com-botao .subtitulo");
-
-botaoAdicionar.addEventListener("click", () => {
-  formularioAdulto2.classList.toggle("visible");
-  if (formularioAdulto2.classList.contains("visible")) {
-    preencherPaises('pais-residencia2');
-    preencherData('dia2', 'mes2', 'ano2');
-    botaoAdicionar.textContent = "-";
-    tituloAdulto2.textContent = "Adulto 2";
-  } else {
-    botaoAdicionar.textContent = "+";
-    tituloAdulto2.textContent = "Adicionar Adulto";
-  }
-});
-
-// Lógica para mostrar/esconder os formulários de pagamento
-const opcoesPagamento = document.querySelectorAll('input[name="modo"]');
-const perguntasCartao = document.getElementById('perguntasCartao');
-const perguntasBoleto = document.getElementById('perguntasBoleto');
-opcoesPagamento.forEach(opcao => {
-  opcao.addEventListener('change', (event) => {
-    perguntasCartao.style.display = 'none';
-    perguntasBoleto.style.display = 'none';
-
-    if (event.target.value === 'cartao') {
-      perguntasCartao.style.display = 'block';
-    } else if (event.target.value === 'boleto') {
-      perguntasBoleto.style.display = 'block';
+    function salvarReservaNoLocalStorage(dadosReserva) {
+      let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
+      reservas.push(dadosReserva);
+      localStorage.setItem('reservas', JSON.stringify(reservas));
     }
-  });
-});
 
 
-// -----------------------------------------------------
-// Lógica para salvar os dados no LocalStorage e Validar Pagamento (REVISADA)
-// -----------------------------------------------------
+    function validarPagamento(event) {
+      event.preventDefault();
+      const metodoPagamento = document.querySelector('input[name="modo"]:checked');
+      if (!metodoPagamento) {
+        alert("Por favor, selecione um método de pagamento.");
+        return;
+      }
 
-function salvarReservaNoLocalStorage(dadosReserva) {
-    // 1. Pega as reservas existentes no localStorage ou cria um array vazio
-    let reservas = JSON.parse(localStorage.getItem('reservas')) || [];
-    
-    // 2. Adiciona a nova reserva
-    reservas.push(dadosReserva);
-    
-    // 3. Salva de volta no localStorage como string
-    localStorage.setItem('reservas', JSON.stringify(reservas));
-}
+      let camposValidados = true;
 
+      const nome1 = document.getElementById('nome').value.trim();
+      const sobrenome1 = document.getElementById('sobrenome').value.trim();
+      const pais1 = document.getElementById('pais-residencia').value;
+      const documento1 = document.getElementById('numero-documento').value.trim();
+      const dia1 = document.getElementById('dia').value;
+      const mes1 = document.getElementById('mes').value;
+      const ano1 = document.getElementById('ano').value;
+      const dataNascimento1 = `${ano1}-${mes1.padStart(2, '0')}-${dia1.padStart(2, '0')}`;
 
-function validarPagamento(event) {
-  event.preventDefault();
-  const metodoPagamento = document.querySelector('input[name="modo"]:checked');
-  if (!metodoPagamento) {
-    alert("Por favor, selecione um método de pagamento.");
-    return;
-  }
-  
-  let camposValidados = true;
+      if (!nome1 || !sobrenome1 || !pais1 || !documento1 || !dia1 || !mes1 || !ano1) {
+        camposValidados = false;
+      }
 
-  // Coleta e Validação dos campos do Adulto 1
-  const nome1 = document.getElementById('nome').value.trim();
-  const sobrenome1 = document.getElementById('sobrenome').value.trim();
-  const pais1 = document.getElementById('pais-residencia').value;
-  const documento1 = document.getElementById('numero-documento').value.trim();
-  const dia1 = document.getElementById('dia').value;
-  const mes1 = document.getElementById('mes').value;
-  const ano1 = document.getElementById('ano').value;
-  const dataNascimento1 = `${ano1}-${mes1.padStart(2, '0')}-${dia1.padStart(2, '0')}`; // Formato YYYY-MM-DD
-
-  if (!nome1 || !sobrenome1 || !pais1 || !documento1 || !dia1 || !mes1 || !ano1) {
-    camposValidados = false;
-  }
-
-  // Coleta dados para salvar, focando no Adulto 1 como responsável
-  const dadosParaSalvar = {
-    nomeCliente: `${nome1} ${sobrenome1}`,
-    paisResidencia: pais1,
-    numeroDocumento: documento1,
-    dataNascimento: dataNascimento1,
-    // NOTA IMPORTANTE: Você precisa definir uma data para a reserva ocorrer no calendário.
-    // Como seu formulário não tem campos de "Data de Check-in/Check-out",
-    // usarei a data atual como um placeholder para fazer o evento aparecer no calendário HOJE.
-    // Idealmente, você adicionaria campos de data de viagem ao formulário.
-    dataReserva: new Date().toISOString().split('T')[0] // Data de hoje (YYYY-MM-DD)
-  };
+      const dadosParaSalvar = {
+        nomeCliente: `${nome1} ${sobrenome1}`,
+        paisResidencia: pais1,
+        numeroDocumento: documento1,
+        dataNascimento: dataNascimento1,
+        dataReserva: new Date().toISOString().split('T')[0]
+      };
 
 
-  // Validação dos campos do Adulto 2 (se visível) - Lógica de validação permanece igual
-  const formularioAdulto2 = document.getElementById("adulto2-form");
-  if (formularioAdulto2.classList.contains("visible")) {
-    const nome2 = document.getElementById('nome2').value.trim();
-    const sobrenome2 = document.getElementById('sobrenome2').value.trim();
-    const pais2 = document.getElementById('pais-residencia2').value;
-    const documento2 = document.getElementById('numero-documento2').value.trim();
-    const dia2 = document.getElementById('dia2').value;
-    const mes2 = document.getElementById('mes2').value;
-    const ano2 = document.getElementById('ano2').value;
+      const formularioAdulto2 = document.getElementById("adulto2-form");
+      if (formularioAdulto2.classList.contains("visible")) {
+        const nome2 = document.getElementById('nome2').value.trim();
+        const sobrenome2 = document.getElementById('sobrenome2').value.trim();
+        const pais2 = document.getElementById('pais-residencia2').value;
+        const documento2 = document.getElementById('numero-documento2').value.trim();
+        const dia2 = document.getElementById('dia2').value;
+        const mes2 = document.getElementById('mes2').value;
+        const ano2 = document.getElementById('ano2').value;
 
-    if (!nome2 || !sobrenome2 || !pais2 || !documento2 || !dia2 || !mes2 || !ano2) {
-      camposValidados = false;
+        if (!nome2 || !sobrenome2 || !pais2 || !documento2 || !dia2 || !mes2 || !ano2) {
+          camposValidados = false;
+        }
+      }
+
+      if (metodoPagamento.value === 'cartao') {
+        const numero = document.getElementById('numero').value.trim();
+        const vencimento = document.getElementById('vencimento').value.trim();
+        const codigo = document.getElementById('codigo').value.trim();
+        const titular = document.getElementById('titular').value.trim();
+        const parcelas = document.getElementById('parcelas').value;
+
+        if (!numero || !vencimento || !codigo || !titular || !parcelas) {
+          camposValidados = false;
+        }
+      } else if (metodoPagamento.value === 'boleto') {
+        const cpf = document.getElementById('boleto-cpf').value.trim();
+        const cep = document.getElementById('boleto-cep').value.trim();
+        if (!cpf || !cep) {
+          camposValidados = false;
+        }
+      }
+
+      if (camposValidados) {
+        salvarReservaNoLocalStorage(dadosParaSalvar);
+        alert("Pagamento confirmado com sucesso!");
+      } else {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+      }
     }
-    // Você pode adicionar os dados do Adulto 2 ao objeto dadosParaSalvar se quiser.
-  }
 
-  // Validação dos campos de pagamento
-  if (metodoPagamento.value === 'cartao') {
-    const numero = document.getElementById('numero').value.trim();
-    const vencimento = document.getElementById('vencimento').value.trim();
-    const codigo = document.getElementById('codigo').value.trim();
-    const titular = document.getElementById('titular').value.trim();
-    const parcelas = document.getElementById('parcelas').value;
+    document.getElementById('confirmarPagamentoCartao').addEventListener('click', validarPagamento);
+    document.getElementById('confirmarPagamentoBoleto').addEventListener('click', validarPagamento);
 
-    if (!numero || !vencimento || !codigo || !titular || !parcelas) {
-      camposValidados = false;
-    }
-  } else if (metodoPagamento.value === 'boleto') {
-    const cpf = document.getElementById('boleto-cpf').value.trim();
-    const cep = document.getElementById('boleto-cep').value.trim();
-    if (!cpf || !cep) {
-      camposValidados = false;
-    }
-  }
-  
-  // Se tudo estiver validado, salvamos e mostramos sucesso.
-  if (camposValidados) {
-    salvarReservaNoLocalStorage(dadosParaSalvar); // <-- Ação principal adicionada aqui
-    alert("Pagamento confirmado com sucesso!");
-    // Opcional: Redirecionar o usuário após o sucesso
-    // window.location.href = 'pagina-do-calendario.html'; 
-  } else {
-    alert("Por favor, preencha todos os campos obrigatórios.");
-  }
-}
+  </script>
+</body>
 
-document.getElementById('confirmarPagamentoCartao').addEventListener('click', validarPagamento);
-document.getElementById('confirmarPagamentoBoleto').addEventListener('click', validarPagamento);
-
-    </script>
-  </body>
 </html>

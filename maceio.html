@@ -1,263 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pacote Escolhido</title>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(247, 248, 252);
-    margin: 0;
-    padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacote Escolhido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(247, 248, 252);
+            margin: 0;
+            padding: 0;
+        }
 
-    
-    header {
-    height: 40px;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 8px 12px rgb(243, 243, 243);
-    z-index: 100;
-}
 
-.logo {
-    font-weight: bold;
-    font-family: "Domine", serif;
-    font-size: 24px;
-    margin-left: 20px;
-    color: #3464ab;
-}
+        header {
+            height: 40px;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background: rgb(255, 255, 255);
+            box-shadow: 0 8px 12px rgb(243, 243, 243);
+            z-index: 100;
+        }
 
-.menu {
-    font-size: 28px;
-    color: black;
-    cursor: pointer;
-    user-select: none;
-}
+        .logo {
+            font-weight: bold;
+            font-family: "Domine", serif;
+            font-size: 24px;
+            margin-left: 20px;
+            color: #3464ab;
+        }
 
-.menu-links {
-    display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    overflow: hidden;
-    flex-direction: column;
-}
+        .menu {
+            font-size: 28px;
+            color: black;
+            cursor: pointer;
+            user-select: none;
+        }
 
-.menu-links a {
-    color: black;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-weight: bold;
-    transition: background 0.3s;
-}
+        .menu-links {
+            display: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            flex-direction: column;
+        }
 
-.menu-links a:hover {
-    background-color: #e8e8e8;
-}
+        .menu-links a {
+            color: black;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
 
-.menu-links.show {
-    display: flex;
-}
+        .menu-links a:hover {
+            background-color: #e8e8e8;
+        }
 
-    h1 {
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 30px;
-        margin-top: 120px;
-    }
+        .menu-links.show {
+            display: flex;
+        }
 
-    .card {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    margin-bottom: 30px;  
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 1200px;  
-    width: 90%;      
-}
-    .section {
-        flex: 1;
-        padding: 10px;
-    }
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-top: 120px;
+        }
 
-    .section:not(:last-child) {
-        border-right: 1px solid #ddd;
-    }
+        .card {
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 90%;
+        }
 
-    .title {
-        font-weight: bold;
-        color: #00416a;
-        margin-bottom: 15px;
-    }
+        .section {
+            flex: 1;
+            padding: 10px;
+        }
 
-    .hotel-info {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-    }
+        .section:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
 
-    .hotel-info img {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border: 3px solid #ffffff;
-        border-radius: 5px;
-    }
+        .title {
+            font-weight: bold;
+            color: #00416a;
+            margin-bottom: 15px;
+        }
 
-    .hotel-details {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+        .hotel-info {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
 
-    .hotel-details h2 {
-        font-size: 15px;
-        margin: 0;
-    }
+        .hotel-info img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            border-radius: 5px;
+        }
 
-    .rating {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+        .hotel-details {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
 
-    .rating span {
-        background: #e6f0ff;
-        color: #00416a;
-        padding: 3px 8px;
-        border-radius: 5px;
-        font-size: 14px;
-        font-weight: bold;
-    }
+        .hotel-details h2 {
+            font-size: 15px;
+            margin: 0;
+        }
 
-    .stars {
-        color: gold;
-        font-size: 14px;
-    }
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .price {
-        color: #00416a;
-        font-size: 18px;
-        font-weight: bold;
-    }
+        .rating span {
+            background: #e6f0ff;
+            color: #00416a;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
 
-    .detail {
-        color: #0077cc;
-        font-size: 12px;
-        cursor: pointer;
-        text-decoration: none;
-    }
+        .stars {
+            color: gold;
+            font-size: 14px;
+        }
 
-    .flight {
-        display: flex;
-        flex-direction: column;
-        gap: 19px;
-    }
+        .price {
+            color: #00416a;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-    .flight-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 80px;
-    }
+        .detail {
+            color: #0077cc;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-    .flight-row div {
-        text-align: center;
-    }
+        .flight {
+            display: flex;
+            flex-direction: column;
+            gap: 19px;
+        }
 
-    .direct {
-    position: relative;
-    color: #0077cc;        
-    font-size: 12px;
-    font-weight: bold;
-    text-decoration: none;  
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
+        .flight-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+        }
 
-.direct::before,
-.direct::after {
-    content: "";
-    display: block;
-    width: 100px;  
-    height: 2px;
-    background: #0077cc;
-}
+        .flight-row div {
+            text-align: center;
+        }
 
-.footer {
-    background: #213a6f;       
-    color: #eee;          
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-}
+        .direct {
+            position: relative;
+            color: #0077cc;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.footer .container {
-    display: flex;          
-    justify-content: space-between;       
-    max-width: 1000px;
-    margin: auto;
-}
+        .direct::before,
+        .direct::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: #0077cc;
+        }
 
-.footer .coluna {
-    flex: 1;
-    min-width: 200px;
-    margin: 10px;
-}
+        .footer {
+            background: #213a6f;
+            color: #eee;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+        }
 
-.footer h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #fff;
-}
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-.footer p {
-    margin: 5px 0;
-    color: #ccc;
-}
+        .footer .coluna {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
 
-.footer .copy {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-    color: #aaa;
-}
+        .footer h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+        }
 
-</style>
+        .footer p {
+            margin: 5px 0;
+            color: #ccc;
+        }
+
+        .footer .copy {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            color: #aaa;
+        }
+    </style>
 </head>
+
 <body>
-    
-<header>
+
+    <header>
         <div class="logo">VOYAGER</div>
         <div class="menu" onclick="toggleMenu()">&#9776;</div>
 
         <div class="menu-links" id="menuLinks">
-            <a href="#">Página Inicial</a>
-            <a href="#">Sobre Nós</a>
-            <a href="#">Contato</a>
-            <a href="#">Minha Conta</a>
+            <a href="inicio.html">Página Inicial</a>
+            <a href="sobrenos.html">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
         </div>
 
-</header>
+    </header>
 
     <h1>PACOTE ESCOLIDO</h1>
 
@@ -294,7 +295,7 @@
             </div>
         </div>
     </div>
-<div class="card">
+    <div class="card">
         <div class="section">
             <div class="title">Hospedagem</div>
             <div class="hotel-info">
@@ -327,7 +328,7 @@
             </div>
         </div>
     </div>
-<div class="card">
+    <div class="card">
         <div class="section">
             <div class="title">Hospedagem</div>
             <div class="hotel-info">
@@ -360,7 +361,7 @@
             </div>
         </div>
     </div>
-<div class="card">
+    <div class="card">
         <div class="section">
             <div class="title">Hospedagem</div>
             <div class="hotel-info">
@@ -395,34 +396,34 @@
     </div>
 
     <footer class="footer">
-  <div class="container">
-    <div class="coluna">
-      <h3>Sobre Nós</h3>
-      <p>Somos uma agência especializada em viagens personalizadas para você.</p>
-    </div>
-    <div class="coluna">
-      <h3>Contato</h3>
-      <p>Email: contato@voyager.com</p>
-      <p>Telefone: (11) 99999-9999</p>
-    </div>
-    <div class="coluna">
-      <h3>Endereço</h3>
-      <p>Av. Conceição, 125</p>
-      <p>São Paulo - SP</p>
-    </div>
-  </div>
-  <div class="copy">
-    <p>© 2025 Voyager - Todos os direitos reservados.</p>
-  </div>
-</footer>
+        <div class="container">
+            <div class="coluna">
+                <h3>Sobre Nós</h3>
+                <p>Somos uma agência especializada em viagens personalizadas para você.</p>
+            </div>
+            <div class="coluna">
+                <h3>Contato</h3>
+                <p>Email: contato@voyager.com</p>
+                <p>Telefone: (11) 99999-9999</p>
+            </div>
+            <div class="coluna">
+                <h3>Endereço</h3>
+                <p>Av. Conceição, 125</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="copy">
+            <p>2025 Voyager - Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 
 <script>
     function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-}
+        const menu = document.getElementById("menuLinks");
+        menu.classList.toggle("show");
+    }
 </script>
 
 </html>

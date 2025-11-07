@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=IM+Fell+Great+Primer:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=IM+Fell+Great+Primer:ital@0;1&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/index.css">
 </head>
 <style>
-    
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-        transition: none !important;   
-        backface-visibility: hidden;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: none !important;
+    backface-visibility: hidden;
+  }
 
-    
-    header {
+
+  header {
     position: relative;
     height: 50px;
     display: flex;
@@ -30,234 +31,236 @@
     align-items: center;
     padding: 10x 15px;
     background: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-}
+  }
 
-.logo {
+  .logo {
     font-weight: bold;
     font-family: "Domine", serif;
     font-size: 24px;
     margin-left: 20px;
     color: #4373d4;
-}
+  }
 
-.menu {
+  .menu {
     font-size: 28px;
     color: black;
     cursor: pointer;
     user-select: none;
-}
+  }
 
-.menu-links {
+  .menu-links {
     display: none;
     position: absolute;
     top: 0px;
     right: 0px;
     background-color: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     flex-direction: column;
-}
+  }
 
-.menu-links a {
+  .menu-links a {
     color: black;
     text-decoration: none;
     padding: 15px 20px;
     display: block;
     font-weight: bold;
     transition: background 0.3s;
-}
+  }
 
-.menu-links a:hover {
+  .menu-links a:hover {
     background-color: #e8e8e8;
-}
+  }
 
-.menu-links.show {
+  .menu-links.show {
     display: flex;
-}
+  }
 
 
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: white;
-        padding: 0 0 0 10%; 
-        gap: 50px;
-    }
-    .hero-text {
-        flex: 1;
-    }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 0 0 0 10%;
+    gap: 50px;
+  }
 
-    .hero-text h1 {
-        font-size: 35px;
-        color: #ffe139;
-        margin-bottom: 30px;
-        font-family: "Domine", serif;
-    }
+  .hero-text {
+    flex: 1;
+  }
 
-    .hero-text p {
-        font-size: 16px;
-        color: #424242;
-        margin-right: 300px;
-    }
+  .hero-text h1 {
+    font-size: 35px;
+    color: #ffe139;
+    margin-bottom: 30px;
+    font-family: "Domine", serif;
+  }
 
-    .hero-btn {
-        margin-top: 20px; 
-        padding: 15px 30px; 
-        border-radius: 50px;
-        border: 1px solid #5a92ba;
-        background-color: #ffffff;
-        color: #5a92ba;
-        font-size: 16px;
-        max-width: 200px;
-        cursor: pointer;
-        display: inline-block;
-        transition: background-color 0.3s;
-        margin-right: 20px;
-        margin-bottom: 50px;
-}
+  .hero-text p {
+    font-size: 16px;
+    color: #424242;
+    margin-right: 300px;
+  }
 
-    .hero-btn:hover {
-        background-color: #4373d4;
-        color: white;
-}
+  .hero-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 1px solid #5a92ba;
+    background-color: #ffffff;
+    color: #5a92ba;
+    font-size: 16px;
+    max-width: 200px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
 
-    
-    
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: white;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 80px;
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      padding: 15px;
-      color: #333;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #ffe167;
-      color: white;
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 3px;
-      margin-bottom: 8px;
-    }
-
-    .conteudo h4 {
-      font-weight: bold;
-    }
-
-    .preco-antigo {
-      text-decoration: line-through;
-      color: #888;
-      font-size: 14px;
-    }
-
-    .preco {
-      color: #3d7cbb;
-      font-size: 20px;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-
-    .saiba-mais {
-      display: block;
-      color: #366492;
-      font-size: 14px;
-      margin-top: 5px;
-      text-decoration: none;
-    }
+  .hero-btn:hover {
+    background-color: #4373d4;
+    color: white;
+  }
 
 
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 15px;
+    color: #333;
+  }
+
+  .tag {
+    display: inline-block;
+    background: #ffe167;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+
+  .conteudo h4 {
+    font-weight: bold;
+  }
+
+  .preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+  }
+
+  .preco {
+    color: #3d7cbb;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+
+  .saiba-mais {
+    display: block;
+    color: #366492;
+    font-size: 14px;
+    margin-top: 5px;
+    text-decoration: none;
+  }
 </style>
+
 <body>
 
-    <section class="hero">
+  <section class="hero">
     <div class="hero-text">
-        <h1>Bem-vindo à sua área de gestão!</h1>
-        <p>Utilize este painel para obter uma visão completa e detalhada de todos os usuários e pedidos.
-        Com uma análise profunda dessas informações, você poderá tomar decisões estratégicas para otimizar nossos pacotes,
+      <h1>Bem-vindo à sua área de gestão!</h1>
+      <p>Utilize este painel para obter uma visão completa e detalhada de todos os usuários e pedidos.
+        Com uma análise profunda dessas informações, você poderá tomar decisões estratégicas para otimizar nossos
+        pacotes,
         expandir nossa base de clientes e garantir a satisfação total em cada jornada.</p>
 
-    <button class="hero-btn" onclick="window.location.href='usuarios.html'">Usuários</button>
-    <button class="hero-btn" onclick="window.location.href='calendario.html'">Pedidos</button>
+      <button class="hero-btn" onclick="window.location.href='usuarios.html'">Usuários</button>
+      <button class="hero-btn" onclick="window.location.href='calendario.html'">Pedidos</button>
     </div>
-</section>
+  </section>
 
 
 
-<div id="conteudo-pacotes" class="conteudo">
-  <h2 style="text-align:center; color:#333; margin-bottom:20px;">PACOTES PROMOCIONAIS PARA OS MELHORES DESTINOS</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="imagens/SaoPaulo.jpg" alt="">
-      <div class="card-body">
-        <div class="tag">PACOTES</div>
-        <h4>São Paulo</h4>
-        <p>Voo + Hospedagem<br>10 dias / 9 noites</p>
-        <p>A partir de:</p>
-        <p class="preco">R$ 5.799,00</p>
-        <a href="saopaulo.html" class="saiba-mais">SAIBA MAIS</a>
+  <div id="conteudo-pacotes" class="conteudo">
+    <h2 style="text-align:center; color:#333; margin-bottom:20px;">PACOTES PROMOCIONAIS PARA OS MELHORES DESTINOS</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="imagens/SaoPaulo.jpg" alt="">
+        <div class="card-body">
+          <div class="tag">PACOTES</div>
+          <h4>São Paulo</h4>
+          <p>Voo + Hospedagem<br>10 dias / 9 noites</p>
+          <p>A partir de:</p>
+          <p class="preco">R$ 5.799,00</p>
+          <a href="saopaulo.html" class="saiba-mais">SAIBA MAIS</a>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="imagens/Maceio.PNG" alt="">
-      <div class="card-body">
-        <div class="tag">PACOTES</div>
-        <h4>Maceio</h4>
-        <p>Voo + Hospedagem<br>8 dias / 7 noites</p>
-        <p>A partir de:</p>
-        <p class="preco">R$ 5.499,00</p>
-        <a href="maceio.html" class="saiba-mais">SAIBA MAIS</a>
+      <div class="card">
+        <img src="imagens/Maceio.PNG" alt="">
+        <div class="card-body">
+          <div class="tag">PACOTES</div>
+          <h4>Maceio</h4>
+          <p>Voo + Hospedagem<br>8 dias / 7 noites</p>
+          <p>A partir de:</p>
+          <p class="preco">R$ 5.499,00</p>
+          <a href="maceio.html" class="saiba-mais">SAIBA MAIS</a>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="imagens/Fortaleza.PNG" alt="">
-      <div class="card-body">
-        <div class="tag">PACOTES</div>
-        <h4>Fortaleza</h4>
-        <p>Voo + Hospedagem<br>8 dias / 7 noites</p>
-        <p>A partir de:</p>
-        <p class="preco">R$ 4.999,00</p>
-        <a href="fortaleza.html" class="saiba-mais">SAIBA MAIS</a>
+      <div class="card">
+        <img src="imagens/Fortaleza.PNG" alt="">
+        <div class="card-body">
+          <div class="tag">PACOTES</div>
+          <h4>Fortaleza</h4>
+          <p>Voo + Hospedagem<br>8 dias / 7 noites</p>
+          <p>A partir de:</p>
+          <p class="preco">R$ 4.999,00</p>
+          <a href="fortaleza.html" class="saiba-mais">SAIBA MAIS</a>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <img src="imagens/FozDoIguaçu.PNG" alt="">
-      <div class="card-body">
-        <div class="tag">PACOTES</div>
-        <h4>Foz do Iguaçu</h4>
-        <p>Voo + Hospedagem<br>15 dias / 14 noites</p>
-        <p>A partir de:</p>
-        <p class="preco">R$ 2.799,00</p>
-        <a href="fozdoiguacu.html" class="saiba-mais">SAIBA MAIS</a>
+      <div class="card">
+        <img src="imagens/FozDoIguaçu.PNG" alt="">
+        <div class="card-body">
+          <div class="tag">PACOTES</div>
+          <h4>Foz do Iguaçu</h4>
+          <p>Voo + Hospedagem<br>15 dias / 14 noites</p>
+          <p>A partir de:</p>
+          <p class="preco">R$ 2.799,00</p>
+          <a href="fozdoiguacu.html" class="saiba-mais">SAIBA MAIS</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
 </body>
+
 </html>
