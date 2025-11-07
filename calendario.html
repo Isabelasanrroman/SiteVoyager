@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style> 
+body {
+    font-family: "Poiret One", sans-serif;
+    background-color: rgb(237, 242, 255);
+}
+
+.container {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+}
+
+.div-voltar {
+    text-align: center;
+}
+
+.link-voltar {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(164, 46, 84);;
+}
+
+.link-voltar:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="calendario"></div>
+        <br><br>
+        <div class="div-voltar">
+            <a href="home-admin.html" class="link-voltar">Voltar</a>
+        </div>
+    </div>
+
+</body>
+<script src="index.global.js"></script>
+<script src="pt-br.global.js"></script>
+
+<script>
+const calendario = document.getElementById('calendario');
+
+const opcoes = {
+  initialView: 'dayGridMonth',
+  locale: 'pt-br',
+  width: 800,
+  height: 500,
+  headerToolbar: {
+    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
+    center: 'title',
+    left: ''
+  },
+  // Lógica do clique no evento ajustada para os novos nomes de campos
+  eventClick: function(info) {
+    // Pega o objeto reserva completo que foi armazenado no extendedProps
+    const reserva = info.event.extendedProps.reserva;
+    
+    // Usa os nomes das propriedades que salvamos no localStorage (nomeCliente, paisResidencia, etc)
+    alert(`
+      Detalhes da Reserva:
+      Nome do Cliente: ${reserva.nomeCliente}
+      País de Residência: ${reserva.paisResidencia}
+      Número do Documento: ${reserva.numeroDocumento}
+      Data de Nascimento: ${reserva.dataNascimento}
+    `);
+  }
+};
+
+const calendarioJS = new FullCalendar.Calendar(calendario, opcoes);
+
+let reservasLS = window.localStorage.getItem('reservas');
+reservasLS = reservasLS ? JSON.parse(reservasLS) : [];
+
+if (reservasLS.length > 0) {
+  reservasLS.forEach(reserva => {
+    calendarioJS.addEvent({
+      title: reserva.nomeCliente,
+      start: reserva.dataReserva, // Usa a data que salvamos no formulário
+      extendedProps: {
+        reserva: reserva // Passa o objeto completo para ser usado no alert
+      }
+    });
+  });
+}
+
+calendarioJS.render();
+
+</script>
+
+</html>

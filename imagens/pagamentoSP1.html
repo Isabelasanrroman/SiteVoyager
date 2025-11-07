@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacote Escolhido</title>
+    <style>
+      /* Seus estilos CSS */
+      header {
+        height: 40px;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 40px;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 5px 12px rgb(207, 207, 207);
+        z-index: 100;
+      }
+
+      .logo {
+        font-weight: bold;
+        font-family: "Domine", serif;
+        font-size: 24px;
+        margin-left: 20px;
+        color: #3464ab;
+      }
+
+      .menu {
+        font-size: 28px;
+        color: black;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .menu-links {
+        display: none;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        flex-direction: column;
+      }
+
+      .menu-links a {
+        color: black;
+        text-decoration: none;
+        padding: 15px 20px;
+        display: block;
+        font-weight: bold;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        transition: background 0.3s;
+      }
+
+      .menu-links a:hover {
+        background-color: #e8e8e8;
+      }
+
+      .menu-links.show {
+        display: flex;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: rgb(247, 248, 252);
+        margin: 0;
+        padding: 0;
+      }
+
+      .secao-informacoes {
+        width: 99%;
+        max-width: 850px;
+        margin-left: 140px;
+        margin-top: 115px;
+        background-color: #fff;
+        padding: 25px 80px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .subtitulo {
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      .linha-divisoria {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 15px 0 25px 0;
+      }
+
+      .texto-hospedagem {
+        text-align: justify;
+        color: #444;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .form-grid {
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap; /* Adicionado para quebrar a linha */
+        justify-content: space-between;
+      }
+
+      .form-field {
+        /* Adicionamos uma nova classe para agrupar label e input */
+        display: flex;
+        flex-direction: column;
+        width: 48%; /* Para ter dois itens por linha */
+        margin-bottom: 20px;
+      }
+
+      .form-field.full-width {
+        width: 100%;
+      }
+
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: rgb(30, 30, 30);
+        text-align: left;
+        font-size: 13px;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 3px solid #eaf0fd;
+        background-color: rgb(255, 255, 255);
+        font-size: 14px;
+        box-sizing: border-box; /* Garante que o padding não aumente a largura */
+      }
+
+      /* Ajustes para o grupo de data de nascimento */
+      .data-nascimento-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+      }
+
+      .data-nascimento-group select {
+        width: calc(
+          33.33% - 7px
+        ); /* Ajusta a largura para caberem três em uma linha */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">VOYAGER</div>
+      <div class="menu" onclick="toggleMenu()">☰</div>
+
+      <div class="menu-links" id="menuLinks">
+        <a href="#">Página Inicial</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Contato</a>
+        <a href="#">Minha Conta</a>
+      </div>
+    </header>
+
+    <section class="secao-informacoes">
+      <h3 class="subtitulo">QUEM VAI VIAJAR?</h3>
+
+      <hr class="linha-divisoria" />
+
+      <h3 class="subtitulo">Adulto 1</h3>
+
+      <p class="texto-hospedagem">
+        Será a pessoa responsável por fazer check-in e check-out na hospedagem
+      </p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" />
+        </div>
+        <div class="form-field">
+          <label for="sobrenome">Sobrenome</label>
+          <input
+            type="text"
+            id="sobrenome"
+            placeholder="Digite seu sobrenome"
+          />
+        </div>
+
+        <div class="form-field full-width">
+          <label for="pais-residencia">País de Residência</label>
+          <select id="pais-residencia"></select>
+        </div>
+
+        <div class="form-field full-width">
+          <label for="numero-documento">Número do documento</label>
+          <input
+            type="number"
+            id="numero-documento"
+            placeholder="Digite o número de seu documento"
+          />
+        </div>
+
+        <div class="form-field full-width">
+          <label for="data-nascimento">Data de nascimento</label>
+          <div class="data-nascimento-group">
+            <select id="dia" placeholder="Dia"></select>
+            <select id="mes" placeholder="Mês"></select>
+            <select id="ano" placeholder="Ano"></select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleMenu() {
+    const menu = document.getElementById("menuLinks");
+    menu.classList.toggle("show");
+}
+
+fetch('paises-gentilicos-google-maps.JSON')
+  .then(response => response.json())
+  .then(data => {
+    const paisSelect = document.getElementById('pais-residencia');
+    data.sort((a, b) => a.nome_pais.localeCompare(b.nome_pais)).forEach(pais => {
+      const option = document.createElement('option');
+      option.value = pais.nome_pais;
+      option.text = pais.nome_pais;
+      paisSelect.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Erro ao carregar países:', error));
+
+
+
+fetch('meses.json')
+  .then(response => response.json())
+  .then(data => {
+    const mesSelect = document.getElementById('mes');
+    data.forEach(mes => {
+      const option = document.createElement('option');
+      option.value = mes.numero;
+      option.text = mes.nome;
+      mesSelect.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Erro ao carregar meses:', error));
+
+const diaSelect = document.getElementById('dia');
+for (let i = 1; i <= 31; i++) {
+  const option = document.createElement('option');
+  option.value = i;
+  option.text = i;
+  diaSelect.appendChild(option);
+}
+
+const anoSelect = document.getElementById('ano');
+for (let i = 2024; i >= 1900; i--) {
+  const option = document.createElement('option');
+  option.value = i;
+  option.text = i;
+  anoSelect.appendChild(option);
+}
+
+    </script>
+  </body>
+</html>

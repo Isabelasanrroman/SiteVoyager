@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOYAGE - Cadastro</title>
+</head>
+
+<style>
+    header {
+    height: 40px;
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 12px rgb(243, 243, 243);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
+    color: #3464ab;
+}
+
+
+body {
+    background-image: url('imagens/i1.png');
+    background-size: auto 83%;      
+    background-position: left top;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    background-color:  #ffffff;
+    margin: 15px;
+    padding: 0;
+    transition: none !important;  
+    backface-visibility: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0px auto;
+    margin-right: 0px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.cadastrar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-left: 80px;
+}
+
+.voltarlogin {
+    text-decoration: none;
+    color: rgb(0, 10, 151);
+    text-align: center;
+}
+
+.voltarlogin:hover {
+    color: rgb(40, 54, 255);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(67, 67, 67);
+    font-size: 14px;
+    display: block;
+}
+
+input {
+    width: 420px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #4e4e4e;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+select {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #4373d4;
+    background-color: #d5dee6;;
+    font-size: 14px;
+}
+
+button {
+    width: 430px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4373d4;
+    color: rgb(255, 253, 253);
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(87, 132, 231);
+    color: #ffffff;
+    border: 1px solid #4373d4;
+}
+
+
+
+</style>
+
+<body>
+    <header>
+        <div class="logo">VOYAGE</div>
+    </header>
+
+
+    <div class="container">
+        <h2>REALIZE O SEU CADASTRO</h2>
+
+        <div class="cadastrar">
+            <input type="email" id="nome" placeholder="Nome Completo">
+            <br><br>
+            <input type="email" id="email" placeholder="E-mail">
+            <br><br>
+            <input type="password" id="password" placeholder="Senha">
+            <br><br>
+            <input type="password" id="confirma-password" placeholder="Confirmar Senha">
+            <br><br>
+            <input type="checkbox" id="exibir-senha" onclick="toggleSenha()"> Exibir Senhas
+            <br><br>
+            <button onclick="cadastrarUsuario()">Cadastrar-se</button>
+            <br>
+            <a href="admin.html" class="voltarlogin">Voltar para o login</a>
+        </div> 
+    </div>
+
+</body>
+
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById("menuLinks");
+    menu.classList.toggle("show");
+}
+
+
+const password = document.getElementById('password')
+const confirmaPassword = document.getElementById('confirma-password')
+
+
+function cadastrarUsuario() {
+    const nome = document.getElementById('nome')
+    const email = document.getElementById('email')
+
+    if (password.value == confirmaPassword.value) {
+        let lista = window.localStorage.getItem('usuarios')
+
+        if (lista == undefined) {
+            lista = []
+            let usuario = {
+                'nome': nome.value,
+                'email': email.value,
+                'password': password.value
+            }
+            lista.push(usuario)
+            window.localStorage.setItem('usuarios', JSON.stringify(lista))
+            alert('Usuário cadastrado')
+        } else {
+            let listaE = window.localStorage.getItem('usuarios')
+            listaE = JSON.parse(listaE)
+
+            let usuarioA = {
+                'nome': nome.value,
+                'email': email.value,
+                'password': password.value
+            }
+
+            listaE.push(usuarioA)
+            window.localStorage.setItem('usuarios', JSON.stringify(listaE))
+            alert('Usuário cadastrado')
+
+            nome.value = ''
+            email.value = ''
+            password.value = ''
+            confirmaPassword.value = ''
+        }
+
+    } else {
+        alert('Senha não confere, verifique seus dados.')
+        password.value = ''
+        confirmaPassword.value = ''
+    }
+}
+
+
+function toggleSenha() {
+    const exibirSenha = document.getElementById('exibir-senha')
+
+    if (exibirSenha.checked == true) {
+        password.type = 'text'
+        confirmaPassword.type = 'text'
+    } else {
+        password.type = 'password'
+        confirmaPassword.type = 'password'
+    }
+}
+
+</script>
+
+</html>
+
+
+
