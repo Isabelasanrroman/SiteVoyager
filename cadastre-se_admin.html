@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Admin</title>
 </head>
 <style>
@@ -16,101 +16,109 @@
 
     body {
         background-color: rgb(236, 245, 252);
-        background-image: url('imagens/fundo.PNG');
+        background-image: url('imagens/fundo1.PNG');
         background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     div {
-        background-color: white;
-        background-image: url('imagens/fundo2.PNG');
-        background-size: cover;
+        background-color: #ffffffcc;
         text-align: center;
-        margin: 0 auto;
-        margin-top: 80px;
-        width: 50%;
-        padding: 20px;
-        color: rgb(255, 255, 255);
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        width: 380px;
     }
 
     div h1 {
-        margin-bottom: 20px;
-        font-size: 42px;
-        color: #fffffd;
+        font-size: 30px;
+        color: #07559f;
         margin-bottom: 30px;
-        margin-top: 20px;
     }
 
-    input {
-        height: 30px;
-        width: 200px;
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        height: 40px;
+        width: 100%;
         padding: 10px;
         font-size: 15px;
-        border: 2px solid rgb(224, 226, 232);
-        border-radius: 5px;
+        border: 1.5px solid #cfd8dc;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: border 0.3s, box-shadow 0.3s;
     }
 
-    label {
-        font-size: 20px;
+    input:focus {
+        border-color: #6fb9ff;
+        box-shadow: 0 0 5px #6fb9ff66;
+        outline: none;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.1);
     }
 
     button {
-        height: 40px;
-        width: 150px;
-        border-radius: 8px #1e8fff;
+        height: 45px;
+        width: 100%;
+        border-radius: 25px;
+        border: none;
         font-size: 18px;
-        background-color: #1e8fff;
-        color: white;
+        background: linear-gradient(135deg, #6fb9ff, #1e8fff);
+        color: #ffffff;
+        margin-top: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    button :hover {
-        cursor: auto;
-        color: white;
-        background-color: #2580dc;
+    button:hover {
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(135deg, #8dc6ff, #3390ff);
     }
 
     div a {
         text-decoration: none;
         font-size: 15px;
-        color: rgb(255, 255, 255);
-        margin-bottom: 80px;
+        color: #1e8fff;
+        display: inline-block;
+        margin-top: 15px;
+        transition: color 0.3s;
     }
 
-    a :hover {
+    div a:hover {
+        color: #07559f;
         text-decoration: underline;
+    }
+
+    label {
+        font-size: 15px;
+        color: #333;
     }
 </style>
 
 <body>
     <div>
         <h1>REALIZE O CADASTRO</h1>
-
         <input type="text" id="nome" placeholder="Nome Completo">
-        <br><br>
-
         <input type="email" id="email" placeholder="Email">
-        <br><br>
-
         <input type="password" id="password" placeholder="Senha">
-        <br><br>
-
         <input type="password" id="confirma-password" placeholder="Confirme sua senha">
-        <br><br>
-
-        <input type="checkbox" id="exibir-senha" onclick="toggleSenha()"> Exibir Senhas
-        <br><br>
-
+        <label><input type="checkbox" id="exibir-senha" onclick="toggleSenha()">Exibir Senhas</label>
         <button onclick="cadastrarUsuario()">Cadastrar-se</button>
-        <br><br>
-
         <a href="adiministrador.html">Voltar para o Login</a>
     </div>
-
 </body>
 
 <script>
     const password = document.getElementById('password')
     const confirmaPassword = document.getElementById('confirma-password')
-
 
     function cadastrarUsuario() {
         const nome = document.getElementById('nome')
@@ -119,49 +127,35 @@
         if (password.value == confirmaPassword.value) {
             let lista = window.localStorage.getItem('usuarios')
 
-            if (lista == undefined) {
+            if (!lista) {
                 lista = []
-                let usuario = {
-                    'nome': nome.value,
-                    'email': email.value,
-                    'password': password.value
-                }
-                lista.push(usuario)
-
-                window.localStorage.setItem('usuarios', JSON.stringify(lista))
-                alert('Usuario cadastrado')
             } else {
-                let listaE = window.localStorage.getItem('usuarios')
-                listaE = JSON.parse(listaE)
-
-                let usuarioA = {
-                    'nome': nome.value,
-                    'email': email.value,
-                    'password': password.value
-                }
-
-                listaE.push(usuarioA)
-                window.localStorage.setItem('usuarios', JSON.stringify(listaE))
-                alert('Usuario cadastrado')
-
-                nome.value = ''
-                email.value = ''
-                password.value = ''
-                confirmaPassword.value = ''
+                lista = JSON.parse(lista)
             }
 
+            let usuario = {
+                'nome': nome.value,
+                'email': email.value,
+                'password': password.value
+            }
+
+            lista.push(usuario)
+            window.localStorage.setItem('usuarios', JSON.stringify(lista))
+            alert('Usuário cadastrado')
+
+            nome.value = ''
+            email.value = ''
+            password.value = ''
+            confirmaPassword.value = ''
         } else {
             alert('Senha não confere')
             password.value = ''
             confirmaPassword.value = ''
         }
-
     }
 
     function toggleSenha() {
-        const exibirSenha = document.getElementById('exibir-senha')
-
-        if (exibirSenha.checked == true) {
+        if (document.getElementById('exibir-senha').checked) {
             password.type = 'text'
             confirmaPassword.type = 'text'
         } else {

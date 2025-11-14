@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
 </head>
 <style>
@@ -16,66 +16,77 @@
 
     body {
         background-color: rgb(236, 245, 252);
-        background-image: url('imagens/fundo.PNG');
+        background-image: url('imagens/fundo1.PNG');
         background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     div {
-        background-color: #2580dc;
-        background-image: url('imagens/fundo2.PNG');
-        background-size: cover;
+        background-color: #ffffffcc;
         text-align: center;
-        margin: 0 auto;
-        margin-top: 100px;
-        width: 50%;
-        padding: 20px;
-        color: #ffffff;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        width: 380px;
     }
 
     div h1 {
-        margin-bottom: 50px;
-        margin-top: 30px;
-        font-size: 45px;
-        color: #ffffff;
+        margin-bottom: 40px;
+        font-size: 32px;
+        color: #07559f;
     }
 
     input {
-        height: 30px;
-        width: 200px;
+        height: 40px;
+        width: 100%;
         padding: 10px;
         font-size: 15px;
-        border: 2px solid rgb(227, 231, 236);
-        border-radius: 5px;
+        border: 1.5px solid #cfd8dc;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: border 0.3s, box-shadow 0.3s;
     }
 
-    label {
-        font-size: 20px;
+    input:focus {
+        border-color: #6fb9ff;
+        box-shadow: 0 0 5px #6fb9ff66;
+        outline: none;
     }
 
     button {
-        height: 40px;
-        width: 150px;
-        border-radius: 8px #1e8fff;
+        height: 45px;
+        width: 100%;
+        border-radius: 25px;
+        border: none;
         font-size: 18px;
-        background-color: #1e8fff;
+        background: linear-gradient(135deg, #6fb9ff, #1e8fff);
         color: #ffffff;
-        margin-top: 30px;
+        margin-top: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
-        cursor: auto;
-        background-color: #2580dc;
-        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(135deg, #8dc6ff, #3390ff);
     }
 
     div a {
         text-decoration: none;
         font-size: 15px;
-        color: rgb(240, 241, 247);
-        margin-bottom: 80px;
+        color: #1e8fff;
+        display: inline-block;
+        margin-top: 15px;
+        transition: color 0.3s;
     }
 
-    a :hover {
+    div a:hover {
+        color: #07559f;
         text-decoration: underline;
     }
 </style>
@@ -84,17 +95,10 @@
     <div>
         <h1>ACESSAR O SISTEMA</h1>
         <input type="email" id="email" placeholder="Email">
-        <br><br>
-
         <input type="password" id="password" placeholder="Senha">
-        <br><br>
-
         <button onclick="validarLogin()">Acessar</button>
-        <br><br>
-
         <a href="cadastre-se_admin.html">Cadastre-se</a>
     </div>
-
 </body>
 
 <script>
@@ -103,7 +107,6 @@
         const password = document.getElementById('password')
 
         let lista = window.localStorage.getItem('usuarios')
-
         lista = JSON.parse(lista)
 
         let logado = false
@@ -113,19 +116,12 @@
             const emailLista = usuario.email
             const passwordLista = usuario.password
 
-
             if (emailLista == email.value) {
                 if (passwordLista == password.value) {
                     alert('Sucesso!')
                     logado = true
                     break
-                } else {
-                    logado = false
                 }
-
-            } else {
-                logado = false
-
             }
         }
 
