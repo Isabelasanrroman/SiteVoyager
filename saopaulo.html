@@ -13,60 +13,66 @@
             padding: 0;
         }
 
-
         header {
-            height: 40px;
+            background-color: #ffffff;
+            color: white;
             display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 40px;
-            background: rgb(255, 255, 255);
-            box-shadow: 0 8px 12px rgb(243, 243, 243);
-            z-index: 100;
+            padding: 18px 58px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
         .logo {
-            font-weight: bold;
-            font-family: "Domine", serif;
-            font-size: 24px;
-            margin-left: 20px;
-            color: #3464ab;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: #213a6f;
+            letter-spacing: 1px;
         }
 
         .menu {
-            font-size: 28px;
-            color: black;
+            font-size: 32px;
+            color: #d4af37;
             cursor: pointer;
             user-select: none;
+            transition: transform 0.3s ease;
+        }
+
+        .menu:hover {
+            transform: scale(1.2);
         }
 
         .menu-links {
             display: none;
             position: absolute;
-            top: 0px;
-            right: 0px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            top: 70px;
+            right: 40px;
+            background: rgba(10, 26, 63, 0.95);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             overflow: hidden;
             flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.4s ease;
         }
 
         .menu-links a {
-            color: black;
+            color: #f0f0f0;
             text-decoration: none;
-            padding: 15px 20px;
-            display: block;
-            font-weight: bold;
-            transition: background 0.3s;
+            padding: 15px 30px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: background 0.3s, color 0.3s;
         }
 
         .menu-links a:hover {
-            background-color: #e8e8e8;
+            background: rgba(255, 215, 0, 0.1);
+            color: #d4af37;
         }
 
         .menu-links.show {
@@ -78,7 +84,7 @@
             font-size: 20px;
             font-weight: bold;
             margin-bottom: 30px;
-            margin-top: 120px;
+            margin-top: 80px;
         }
 
         .card {
@@ -101,7 +107,7 @@
             border-right: 1px solid #ddd;
         }
 
-        .title {
+        .titulo-bloco {
             font-weight: bold;
             color: #08639b;
             margin-bottom: 15px;
@@ -133,13 +139,13 @@
             margin: 0;
         }
 
-        .rating {
+        .nota {
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        .rating span {
+        .nota span {
             background: #e6f0ff;
             color: #00416a;
             padding: 3px 8px;
@@ -148,25 +154,25 @@
             font-weight: bold;
         }
 
-        .stars {
+        .estrelas {
             color: gold;
             font-size: 14px;
         }
 
-        .price {
+        .preco {
             color: #00379e;
             font-size: 18px;
             font-weight: bold;
         }
 
-        .detail {
+        .vermais {
             color: #0077cc;
             font-size: 12px;
             cursor: pointer;
             text-decoration: none;
         }
 
-        .flight {
+        .voo {
             display: flex;
             flex-direction: column;
             gap: 19px;
@@ -183,7 +189,7 @@
             text-align: center;
         }
 
-        .direct {
+        .direto {
             position: relative;
             color: #0077cc;
             font-size: 12px;
@@ -194,8 +200,8 @@
             gap: 10px;
         }
 
-        .direct::before,
-        .direct::after {
+        .direto::before,
+        .direto::after {
             content: "";
             display: block;
             width: 100px;
@@ -256,138 +262,156 @@
             <a href="sobrenos.html">Sobre Nós</a>
             <a href="contato.html">Contato</a>
         </div>
-
     </header>
 
-    <h1>PACOTE ESCOLIDO</h1>
+    <h1>DESTINO SELECIONADO</h1>
 
     <div class="card">
         <div class="section">
-            <div class="title">Hospedagem</div>
+            <div class="titulo-bloco">Hospedagem</div>
             <div class="hotel-info">
                 <img src="imagens/hotel4.PNG" alt="Hotel Valencia">
                 <div class="hotel-details">
                     <h2>HOTEL VALENCIA</h2>
-                    <div class="rating">
+
+                    <div class="nota">
                         <span>5.0</span>
-                        <div class="stars">★★★★★</div>
+                        <div class="estrelas">★★★★★</div>
                     </div>
+
                     <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 5.799,00</div>
-                    <a href="site_saopaulo2.html" class="btn-detail">VER DETALHE</a>
+                    <div class="preco">R$ 5.799,00</div>
+                    <a href="site_saopaulo2.html" class="vermais">VER DETALHE</a>
                 </div>
             </div>
         </div>
+
         <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
+            <div class="titulo-bloco">Voo</div>
+            <div class="voo">
                 <div class="flight-row">
                     <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>COP<br><strong>02:35</strong></div>
                 </div>
+
                 <div class="flight-row">
                     <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>VCP<br><strong>19:00</strong></div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="section">
-            <div class="title">Hospedagem</div>
+            <div class="titulo-bloco">Hospedagem</div>
             <div class="hotel-info">
                 <img src="imagens/hotel2.PNG" alt="Hotel Atlantico">
                 <div class="hotel-details">
                     <h2>HOTEL ATLANTICO</h2>
-                    <div class="rating">
+
+                    <div class="nota">
                         <span>4.0</span>
-                        <div class="stars">★★★★</div>
+                        <div class="estrelas">★★★★</div>
                     </div>
+
                     <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 4.299,00</div>
-                    <a href="site_saopaulo3.html" class="btn-detail">VER DETALHE</a>
+                    <div class="preco">R$ 4.299,00</div>
+                    <a href="site_saopaulo3.html" class="vermais">VER DETALHE</a>
                 </div>
             </div>
         </div>
+
         <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
+            <div class="titulo-bloco">Voo</div>
+            <div class="voo">
                 <div class="flight-row">
                     <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>COP<br><strong>02:35</strong></div>
                 </div>
+
                 <div class="flight-row">
                     <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>VCP<br><strong>19:00</strong></div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="section">
-            <div class="title">Hospedagem</div>
+            <div class="titulo-bloco">Hospedagem</div>
             <div class="hotel-info">
                 <img src="imagens/hotel3.PNG" alt="Hotel Paraíso">
                 <div class="hotel-details">
                     <h2>HOTEL PARAÍSO</h2>
-                    <div class="rating">
+
+                    <div class="nota">
                         <span>3.0</span>
-                        <div class="stars">★★★</div>
+                        <div class="estrelas">★★★</div>
                     </div>
+
                     <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 2.299,00</div>
-                    <a href="site_saopaulo4.html" class="btn-detail">VER DETALHE</a>
+                    <div class="preco">R$ 2.299,00</div>
+                    <a href="site_saopaulo4.html" class="vermais">VER DETALHE</a>
                 </div>
             </div>
         </div>
+
         <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
+            <div class="titulo-bloco">Voo</div>
+            <div class="voo">
                 <div class="flight-row">
                     <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>COP<br><strong>02:35</strong></div>
                 </div>
+
                 <div class="flight-row">
                     <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>VCP<br><strong>19:00</strong></div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="card">
         <div class="section">
-            <div class="title">Hospedagem</div>
+            <div class="titulo-bloco">Hospedagem</div>
             <div class="hotel-info">
                 <img src="imagens/hotel1.PNG" alt="Hotel Jardim Europa">
                 <div class="hotel-details">
                     <h2>HOTEL JARDIM EUROPA</h2>
-                    <div class="rating">
+
+                    <div class="nota">
                         <span>4.0</span>
-                        <div class="stars">★★★★</div>
+                        <div class="estrelas">★★★★</div>
                     </div>
+
                     <div>10 DIAS / 9 NOITES</div>
-                    <div class="price">R$ 2.999,00</div>
-                    <a href="site_saopaulo5.html" class="btn-detail">VER DETALHE</a>
+                    <div class="preco">R$ 2.999,00</div>
+                    <a href="site_saopaulo5.html" class="vermais">VER DETALHE</a>
                 </div>
             </div>
         </div>
+
         <div class="section">
-            <div class="title">Voo</div>
-            <div class="flight">
+            <div class="titulo-bloco">Voo</div>
+            <div class="voo">
                 <div class="flight-row">
                     <div>VCP<br><strong>01:35</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>COP<br><strong>02:35</strong></div>
                 </div>
+
                 <div class="flight-row">
                     <div>COP<br><strong>18:00</strong></div>
-                    <div class="direct">Direto</div>
+                    <div class="direto">Direto</div>
                     <div>VCP<br><strong>19:00</strong></div>
                 </div>
             </div>
@@ -400,17 +424,20 @@
                 <h3>Sobre Nós</h3>
                 <p>Somos uma agência especializada em viagens personalizadas para você.</p>
             </div>
+
             <div class="coluna">
                 <h3>Contato</h3>
                 <p>Email: contato@voyager.com</p>
                 <p>Telefone: (11) 99999-9999</p>
             </div>
+
             <div class="coluna">
                 <h3>Endereço</h3>
                 <p>Av. Conceição, 125</p>
                 <p>São Paulo - SP</p>
             </div>
         </div>
+
         <div class="copy">
             <p>2025 Voyager - Todos os direitos reservados.</p>
         </div>
